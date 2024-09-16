@@ -29,14 +29,15 @@ p {
 */
 
 
-.placeholder {
-	font-size: 1.2rem;
-}
-
 
 #first-div {
 	font-size: 1.2rem;
 }
+
+.placeholder {
+	font-size: 1.2rem;
+}
+
 
 
 @media screen and (min-width: 769px) {
