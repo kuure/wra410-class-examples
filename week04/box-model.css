@@ -1,15 +1,37 @@
-* {
 
-}
+/* reset all elements to use border-box sizing 
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}  
+
+*/
+
 
 body {
-
+	background-color: hsl(109, 100%, 85%);	
 }
 
 
+/* rules for all divs 
 div {
+	background-color: rgba(255,255,255,0.7);
+	border: 1px solid rgba(0,0,0,1);
+}
 
+*/
+
+/* rules for all ps
+p {
+	margin-bottom: 2rem;
+}
+
+*/
+
+
+.placeholder {
 }
 
 
-
+#first-div {
+}
