@@ -37,3 +37,11 @@ p {
 #first-div {
 	font-size: 1.2rem;
 }
+
+
+@media screen and (min-width: 769px) {
+/* inside here is a brand new stylesheet that takes effect IF the rule inside the parentheses evaluates as "true" */
+	body {
+		background-color: hsl(289,100%,85%);
+	}
+}
