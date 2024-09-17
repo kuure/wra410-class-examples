@@ -1,30 +1,48 @@
 
-/* reset all elements to use border-box sizing 
-
+/* reset all elements to use border-box sizing */
 *, *::before, *::after {
 	box-sizing: border-box;
 }  
 
-*/
 
 
+
+/* body background for default view */
 body {
 	background-color: hsl(109, 100%, 85%);	
 }
 
 
-/* rules for all divs 
+
+/* rules for all divs */
 div {
 	background-color: rgba(255,255,255,0.7);
 	border: 1px solid rgba(0,0,0,1);
+	padding: 1rem;
+  max-width: 40rem;
+	margin: 1rem auto;
+
+	font-family: "Comic Sans MS", "Algerian", sans-serif;
+
+
 }
 
-*/
+/* hide the empty div */
+div.empty {
+	display: none;
+}
 
-/* rules for all ps
+/* rules for all ps */
 p {
 	margin-bottom: 2rem;
 }
+
+
+
+/*
+Make the first paragraph text bold, and the second paragraph text italic without using id or class names
+Change the font for each <div> but only when the screen is narrow
+Change the element with the id of first-div so it has a 5px purple dotted border.
 
 */
 
@@ -32,12 +50,20 @@ p {
 
 #first-div {
 	font-size: 1.2rem;
+	border: 5px dotted hsl(289, 92%, 31%)
 }
 
 .placeholder {
 	font-size: 1.2rem;
 }
 
+.placeholder p:first-child {
+	font-weight: bold;
+}
+ 
+.placeholder p:last-of-type {
+	font-style: italic;
+}
 
 
 @media screen and (min-width: 769px) {
@@ -45,4 +71,13 @@ p {
 	body {
 		background-color: hsl(289,100%,85%);
 	}
+
+	p {
+		font-size: 2rem;
+	}
+
+	div {
+		font-family: "Times New Roman", serif;
+	}
+
 }

@@ -5,4 +5,10 @@
 
 Class examples from week 4
 
+From Monday:
+- <boxmodel.html> file, with matching CSS file.
 
+
+From Wednesday:
+- nav examples from random websites
+- Flexbox stuff
