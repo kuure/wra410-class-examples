@@ -4,3 +4,45 @@
 *::after {
 	box-sizing: border-box;
 }  
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+header, nav, main {
+	border: 1px solid black;
+	margin-bottom: 1rem;
+	padding: 1rem;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+
+}
+
+
+
+nav ul {
+	display: flex;
+	justify-content: space-between;
+}
+
+nav ul li {
+	list-style: none;
+	padding-left: 1rem;
+}
+
+main { 
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+main div {
+	background-color: yellow;
+	padding: 1rem;
+	margin: 1rem;
+  width: 20rem;
+}
