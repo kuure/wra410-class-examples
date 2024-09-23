@@ -1,0 +1,44 @@
+/* reset all elements to use border-box sizing */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}  
+
+/* turn off all the margins and padding, set the margins and padding
+ * to 0, give the page a backgroud color, and tell the <body> to
+ * always be 100% of the height of the viewport
+ */
+body {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	background-color: hsl(0,100%,92%);
+}
+
+
+/* this will affect all <div> elements */
+div {
+	background-color: hsl(0,0%,100%);	
+	border: 2px solid hsl(0,0%,50%);	
+	padding: 1rem;
+	margin: 1rem;
+}
+
+
+.div1 {
+
+}
+
+.div2 {
+
+}
+
+.div3 {
+
+}
+
+.div4 {
+
+}
