@@ -14,16 +14,11 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: hsl(0,100%,92%);
-
-	/* vertical AND horizontal centering */
-	/*
-	height: 100vh;
 	display: flex;
+	height: 100vh;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	*/
-	
 
 }
 
@@ -38,10 +33,20 @@ div {
 	margin: 1rem;
 }
 
+/* nested flex box - this is the outer div */
+.container {
+	display: flex;
+}
+
 
 /* each separate div with its own colors */
 .div1 {
 	color: hsl(20,90%,40%);
+}
+
+/* :hover pseudo-class */
+.div1:hover {
+	background-color: hsl(20,80%,10%);
 }
 
 .div2 {
