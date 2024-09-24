@@ -1,0 +1,106 @@
+/* reset all elements to use border-box sizing */
+/* AND to set every margin and padding value to zero */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}  
+
+
+div {
+	/* vertically and horizontally align all the content */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-color: hsl(120, 90%, 90%);
+	width: 10rem;
+	height: 10rem;
+	padding: 1rem;	
+	margin: 1rem;
+
+	/* drop shadows are a thing */
+	/* just search for a css drop shadow generator...*/
+	box-shadow: .5rem .5rem .5rem hsl(0, 0%, 80%);
+
+}	
+
+
+.one {
+	/* change the CSS width property */
+	transition-property: width;
+
+	/* make that change take one whole second to complete */
+	transition-duration: 1s;
+
+	/* have the transtion happen slowly at first, and quickly at the end */
+	transition-timing-function: ease-in;
+
+	/* wait half a second after the mouse hovers before starting */
+	transition-delay: .5s;
+	/*
+	 shorthand for above:
+	 transition: width 1s ease-in .5s;
+	 */
+}
+
+
+.one:hover {
+	/* the hover state only has to list the value(s) that
+		 are different from the default state */
+	width: 20rem;
+}
+
+
+
+
+
+
+.two {
+	/* list multiple items to change at one time */
+	transition: width 2s, height 2s, background-color 2s;				
+}	
+
+.two:hover {
+	width: 20rem; 
+	height: 20rem;
+	background-color: orange;
+}
+
+
+
+
+.three {
+/* 
+ multiple items, all with different properties these are listed on
+ separate lines for clarity, but can all be on a single line
+ separated by commas
+
+ this would be equally valid: 
+ transition: width 2s ease-in 0s, height 2s ease-in-out .5s, background-color 4s ease-out 4s, font-size 2s ease-in-out .5s;
+ */
+	transition: width 2s ease-in 0s, 
+	height 2s ease-in-out .5s,
+	background-color 4s ease-out 4s,
+	font-size 2s ease-in-out .5s;
+}
+
+.three:hover {
+	width: 20rem; 
+	height: 20rem;
+	font-size: 3rem;
+}
+
+
+
+
+.four {
+	transition: transform 3s ease-in 1s;
+}
+
+.four:hover {
+	/* transform allows you to do all sorts of things */
+	transform: rotate(180deg);
+}
