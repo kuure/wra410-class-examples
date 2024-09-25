@@ -12,4 +12,9 @@ centering for a container element inside the browser window.
 
 ### Wednesday
 
-The *css-transitions* folder 
+CSS transitions are in the **css-transitions** folder, and information is
+in the markdown file.
+
+Image examples are in the **image-examples** folder.
+
+
