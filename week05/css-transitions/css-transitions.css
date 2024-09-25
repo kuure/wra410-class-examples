@@ -8,6 +8,11 @@
 	padding: 0;
 }  
 
+/* add padding BACK to the body after resetting it all above - * every
+ * element will have to have padding and/or margins * set explicitly */
+body {
+	padding: 2rem;
+}
 
 div {
 	/* vertically and horizontally align all the content */
