@@ -7,5 +7,5 @@
 
 The <dom-scavenger-hunt.html> file has many things that need to be
 corrected; you will need to use JavaScript's `querySelector()` *method*
-to isolate each item and change their properties.
+to isolate each item and change the properties as needed.
 
