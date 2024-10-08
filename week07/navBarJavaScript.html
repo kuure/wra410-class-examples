@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+
+		<title>WRA410 JS Demo</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	</head>
+
+	<body>
+
+
+		<nav class="container"> </nav>
+
+
+
+
+
+		<script>
+
+			const container = document.querySelector(".container");
+
+			const navLinks = ["home","about","contact","portfolio","faq","orders","address"];
+
+			function makeMeANavBar(navArray) {
+				let newNavItems = navArray.map(link => {
+					return(
+					`<li><a href="${link}.html">${link.toUpperCase()}</a></li>`
+					)
+				})
+				.join('')
+
+				container.innerHTML = newNavItems;
+				console.log(newNavItems)
+			}
+
+			makeMeANavBar(navLinks);
+
+
+
+		</script>
+
+
+
+
+	</body>
+</html>
