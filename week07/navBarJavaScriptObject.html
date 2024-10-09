@@ -35,14 +35,15 @@
 				console.log(navArrayOfObjects);
 
 				let newNavItems = navArrayOfObjects.map(link => {
+
 					return(
-						`<li><a href=""></a></li>`
+						`<li class="current"><a href="${link.url}">${link.text}</a></li>`
 					)
 				})
 				.join('')
 
 				container.innerHTML = newNavItems;
-				
+
 				console.log(newNavItems)
 
 			}
