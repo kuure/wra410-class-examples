@@ -13,7 +13,9 @@
 	<body>
 
 
-		<nav class="container"> </nav>
+		<nav>
+			<ul class="container"></ul>
+		</nav>
 
 
 
@@ -30,6 +32,8 @@
 
 			function makeMeANavBar(navArrayOfObjects) {
 
+				console.log(navArrayOfObjects);
+
 				let newNavItems = navArrayOfObjects.map(link => {
 					return(
 						`<li><a href=""></a></li>`
@@ -38,6 +42,7 @@
 				.join('')
 
 				container.innerHTML = newNavItems;
+				
 				console.log(newNavItems)
 
 			}
