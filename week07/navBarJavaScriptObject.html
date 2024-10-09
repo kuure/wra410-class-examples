@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+
+		<title>WRA410 Navbar With Object</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	</head>
+
+	<body>
+
+
+		<nav class="container"> </nav>
+
+
+
+		<script>
+
+			const container = document.querySelector(".container");
+
+			const navLinks = [
+				{ text: "Home", url: "/"},
+				{ text: "About", url: "/portfolio"},
+				{ text: "Contact", url: "/contact"},
+				{ text: "Portfolio", url: "/portfolio"},
+			];
+
+			function makeMeANavBar(navArrayOfObjects) {
+
+				let newNavItems = navArrayOfObjects.map(link => {
+					return(
+						`<li><a href=""></a></li>`
+					)
+				})
+				.join('')
+
+				container.innerHTML = newNavItems;
+				console.log(newNavItems)
+
+			}
+
+			makeMeANavBar(navLinks);
+
+
+
+		</script>
+
+
+
+
+	</body>
+</html>

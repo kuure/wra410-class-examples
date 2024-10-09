@@ -21,14 +21,25 @@
 
 		<script>
 
+			// the element in the HTML to put stuff into
 			const container = document.querySelector(".container");
 
+			// the links we want in our nav bar
 			const navLinks = ["home","about","contact","portfolio","faq","orders","address"];
 
+			// the function named makeMeANavBar
+			// you _pass_ it an array and it will make links from every item
 			function makeMeANavBar(navArray) {
+
+				// see what the array looks like
+				console.log("Passed-in navArray argument:", navArray)
+
+				// create a new variable named newNavItems, which will
+				// contain the results of looping over the array and
+				// wrapping some HTML around each part
 				let newNavItems = navArray.map(link => {
 					return(
-					`<li><a href="${link}.html">${link.toUpperCase()}</a></li>`
+						`<li><a href="${link}.html">${link.toUpperCase()}</a></li>`
 					)
 				})
 				.join('')
