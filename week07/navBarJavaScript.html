@@ -4,7 +4,7 @@
 
 	<head>
 
-		<title>WRA410 JS Demo</title>
+		<title>WRA410 JavaScript Navbar From an Array</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,42 +13,65 @@
 	<body>
 
 
+		<!-- the empty container we will select with JavaScript's
+			querySelector....-->
 		<nav class="container"> </nav>
-
 
 
 
 
 		<script>
 
-			// the element in the HTML to put stuff into
+			// ...which we do right here
 			const container = document.querySelector(".container");
 
 			// the links we want in our nav bar
+			// these are a JavaScript _array_ - a list of any "things" in
+			// brackets separated by commas
 			const navLinks = ["home","about","contact","portfolio","faq","orders","address"];
+
+			// call the function below, _passing_ the 'navLinks' array in as an
+			// _argument_ so the function can use it
+			makeMeANavBar(navLinks);
+
 
 			// the function named makeMeANavBar
 			// you _pass_ it an array and it will make links from every item
+			// inside the function, you use the name "navArray" to refer to it
 			function makeMeANavBar(navArray) {
 
-				// see what the array looks like
+				// see what the array looks like in the browser's console
 				console.log("Passed-in navArray argument:", navArray)
 
-				// create a new variable named newNavItems, which will
-				// contain the results of looping over the array and
-				// wrapping some HTML around each part
+				// create a new variable named newNavItems, by using JavaScript's
+				// .map() method which works on arrays 
+
+				// the new variable will contain the results of looping over the
+				// array and wrapping some HTML around each part
 				let newNavItems = navArray.map(link => {
+					// make a blob of html for each element in the array
 					return(
+						// this uses backticks (``) to create a JavaScript _template
+						// string_  - these allow you to mix actual literal text with
+						// JavaScript code - anything inside of the ${} is treated like
+						// code, so it uses the value of the link and adds '.html' to
+						// the end, the uses it as the link text but converted to upper
+						// case
 						`<li><a href="${link}.html">${link.toUpperCase()}</a></li>`
 					)
 				})
+				// by default, arrays items will end up with commas between
+				// them; this says push them all together with an no character at
+				// all between them
 				.join('')
 
-				container.innerHTML = newNavItems;
+				// log the new nav links to the browser console
 				console.log(newNavItems)
-			}
 
-			makeMeANavBar(navLinks);
+				// take the container we query selected earlier,
+				// then set the contents equal to our new variable from above
+				container.innerHTML = newNavItems;
+			}
 
 
 
