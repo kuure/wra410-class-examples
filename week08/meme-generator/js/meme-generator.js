@@ -1,12 +1,24 @@
-// query selector for the main container
-const container = document.querySelector(".container");
+// query selectors
 
+// both inputs, selected by their IDs
+const noInput = document.querySelector("#noInput");
+const yesInput = document.querySelector("#yesInput");
 
-// sample event handler - it listens for the 'click' event, then
-// console logs some text followed by the JavaScript event itself
-container.addEventListener("click", (event) => {
-	console.log("You clicked the somewhere inside the '.container' div...")
-	console.log(event)
+// both outputs, selected by class name 
+const noText = document.querySelector(".noText");
+const yesText = document.querySelector(".yesText");
+
+// event listener for the noInput element, 
+// listening for the 'input' event to fire
+noInput.addEventListener("input", () => {
+	// when it happens, set the value of the noText
+	// element to be equal to the value in the <input>
+	// AND turn it to UPPERCASE
+	noText.innerHTML = noInput.value.toUpperCase()
 });
 
-// add your own stuff below...
+// same as above, no and yes reversed
+yesInput.addEventListener("input", (event) => {
+	yesText.innerHTML = yesInput.value.toUpperCase()
+});
+
