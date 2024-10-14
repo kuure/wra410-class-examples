@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html lang="en">
+
+	<head>
+
+		<title>HTML Event</title>
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	</head>
+
+	<body>
+
+		<button>Click Me</button>
+
+		<script>
+
+			const myButton = document.querySelector("button")
+
+			function printMessage(message) {
+				console.log("here is your message: ", message)
+			}
+
+			myButton.addEventListener("click", (e) => {
+				console.log(e)
+				printMessage("This here is a message");
+				printMessage("This is another one");
+			});
+
+
+		</script>
+
+	</body>
+
+	</html>
