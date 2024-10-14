@@ -1,0 +1,25 @@
+/* the usual reset */
+*,*::before,*::after{
+	box-sizing: border-box;
+}
+
+/* change to a sans-serif font */
+body {
+	font-family: "Helvetica", "Arial", sans-serif;
+}
+
+/* never let images stretch */
+img {
+	max-width: 100%;
+}
+
+/* display output text and images side-by side and vertically aligned */
+.no,.yes {
+	display: flex;
+	align-items: center;
+}
+
+/* add padding around the text */
+.no p, .yes p {
+	padding: 1rem;
+}

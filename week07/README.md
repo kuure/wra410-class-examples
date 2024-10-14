@@ -1,4 +1,4 @@
-# Week 06
+# Week 07
 
 ## 10/7/2024 - 10/9/2024
 
@@ -17,7 +17,7 @@ const navLinksArray = ["home","about","contact","portfolio","faq","orders","addr
 
 
 
-### Tuesday
+### Wednesday
 
 The `navBarJavaScriptObject.html` is essentially the same, but uses 
 an array of JavaScript _objects_, which are collections of _properties_ (or
