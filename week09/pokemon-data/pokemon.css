@@ -1,0 +1,70 @@
+/* google font*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap');
+
+/* use border-box for all box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+	font-family: 'Rubik', sans-serif;
+	background-color: hsl(339deg 60% 50% / 0.2);
+}
+
+h1 {
+	text-align: center;
+	margin: 4rem 0 0 2rem;
+}
+
+/* this is the element on the page that gets filled by the script */
+#container {
+	width: 80%;
+	margin: 4rem auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+}
+
+/* each data item gets wrapped in a div with '.pokemon' class */
+.pokemon {
+	display: flex;
+	width: 30rem;
+	height: 20rem;
+	padding: 1rem;
+	margin-bottom: 4rem;
+	border-radius: 1rem;
+
+	/*
+	 crazy box shadows - I was looking at this:
+	 https://www.joshwcomeau.com/css/designing-shadows/
+  */
+	background-color: hsl(339deg 100% 100% / 1);
+	box-shadow:
+		1px 2px 2px hsl(339deg 60% 50% / 0.2),
+		2px 4px 4px hsl(339deg 60% 50% / 0.2),
+		4px 8px 8px hsl(339deg 60% 50% / 0.2),
+		8px 16px 16px hsl(339deg 60% 50% / 0.2),
+		16px 32px 32px hsl(339deg 60% 50% / 0.2);
+
+ }
+
+.pokemon figure {
+	align-self: center;
+}
+
+.pokemon figure img {
+	width: 100%; 
+	max-height: 18rem;
+}
+
+.pokemon .text {
+	padding: .5rem 0 0 .5rem;
+	
+}
+.pokemon .text h1 {
+	padding: 0;
+	margin: 0 0 2rem 0;
+}
