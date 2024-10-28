@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+<title>Minimal API Fetch</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<script>
+
+const url = "https://baddayeveryday.com/api/json/pokedemo/"
+
+fetchRemoteData()
+	.then(results => consoleLogFunction(results) ) 
+	.catch(error => console.log(error))
+
+async function fetchRemoteData() {
+  const response = await fetch(url)
+	if(!response.ok) {
+    throw new Error(`HTTP error status: ${response.status}`)
+	}
+  return await response.json()
+}
+
+function consoleLogFunction(jsonData) {
+	console.log(jsonData)
+}
+
+
+</script>
+
+
+</body>
+</html>
