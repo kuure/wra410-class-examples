@@ -1,0 +1,64 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+<title>Minimal API Fetch</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<div class="container"></div>
+
+
+<script>
+
+// where to put HTML?
+const container = document.querySelector(".container")	
+
+// get all the 'posts' from jsonplaceholder
+const url = "https://jsonplaceholder.typicode.com/posts"
+
+// don't worry about the next ten lines - these 
+// get the remote data and pass it to the 'putStuffInPage'
+// function; this could be changed to any function at all
+fetchRemoteData()
+	.then(results => putStuffInPage(results) ) 
+	.catch(error => console.log(error))
+
+async function fetchRemoteData() {
+  const response = await fetch(url)
+	if(!response.ok) {
+    throw new Error(`HTTP error status: ${response.status}`)
+	}
+  return await response.json()
+}
+
+
+
+// actually do things with the data
+function putStuffInPage(jsonData) {
+	// take the first item in the array and call it by 'myItem'
+	const myItem = jsonData[0]
+	// print to the console to see if it works
+	console.log(myItem)
+
+	// make a blob of HTML using values from the data inside of the 
+	// backticks (`) using ${} to get the actual values from the data
+	const newHTML = `
+		<h1>${myItem.title}</h1>
+		<p>${myItem.body}"></p>
+	`
+	// put the new HTML into the empty container
+	container.innerHTML = newHTML
+}
+
+
+</script>
+
+
+</body>
+</html>
