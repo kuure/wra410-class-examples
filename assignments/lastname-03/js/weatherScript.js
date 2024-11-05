@@ -2,8 +2,7 @@
 const container = document.querySelector(".container")	
 
 // the API where your data comes from
-// you have to set this up, getting the 
-// values from a drop-down menu
+// you have to set this up
 const url = ""
 
 
@@ -20,9 +19,13 @@ function weatherApp(weatherData) {
 	// see what the data looks like
 	console.log(weatherData)
 
-	// the rest is up to you, you need to print the place name
-	// and at least TWO properties about the weather of your choosing
-	// using the national weather service API
+	// style something based on the weather - 
+	// a different color scheme based on the weather,
+	// dark / light mode for sunrise and sunset times, etc.
+	
+	// anything where the user interface looks is determined by the
+	// values in your data
+
 
 
 
