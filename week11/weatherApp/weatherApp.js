@@ -13,12 +13,18 @@ fetchRemoteData()
 
 // this is where our code goes
 function handleRemoteData(jsonData) {
-	console.log(jsonData)
+
+console.log(jsonData)
+
+
+
+
+
 }
 
 
 
-// don't even worry about this one
+// don't even worry about this code
 // you can pretend it doesn't exist
 async function fetchRemoteData() {
   const response = await fetch(url)
