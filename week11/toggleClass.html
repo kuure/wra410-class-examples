@@ -30,7 +30,7 @@
 
 	<h1>Toggling Classes</h1>
 
-	<button>Click Me For Light Mode</button>
+	<button>Click Me For Dark Mode</button>
 
 
 	<script>
@@ -45,7 +45,26 @@
 
 		function handleButtonClick(event) {
 			
+
+
 			console.log(event)
+/*
+
+check mode value
+
+			if mode equals "light" then:
+				change css class of body from light to dark
+				change value of variable from light to dark
+				change text in button from dark to light
+
+			else 
+				change css class of body from light to light
+				change value of variable from light to light
+				change text in button from light to dark
+
+*/
+
+
 
 			if(mode === 'light') {
 				body.classList.replace("light","dark")

@@ -1,6 +1,8 @@
 const container = document.querySelector(".container")	
-const weatherDay = "saturday"
+const weatherDay = "thursday"
 const url = "https://api.weather.gov/gridpoints/GRR/82,39/forecast"
+
+console.log(weatherDay)
 
 fetchRemoteData()
 	.then(results => handleRemoteData(results) ) 

@@ -12,6 +12,7 @@ const container = document.querySelector(".container")
 const weatherDay = "saturday"
 
 
+
 // where we get the data from 
 // this is for east lansing, based on the latitude and longitude
 const url = "https://api.weather.gov/gridpoints/GRR/82,39/forecast"
