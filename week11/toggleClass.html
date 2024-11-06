@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+
+<title></title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="">
+
+<style>
+
+.dark {
+	background-color: black;
+	color: white;
+}
+
+.light {
+	background-color: white;
+	color: black;
+}
+
+</style>
+
+</head>
+
+<body class="light">
+
+	<h1>Toggling Classes</h1>
+
+	<button>Click Me For Light Mode</button>
+
+
+	<script>
+
+		const button = document.querySelector("button")
+		const body = document.querySelector("body")
+
+		let mode = "light"
+
+
+		button.addEventListener("click",(event) => handleButtonClick(event) )
+
+		function handleButtonClick(event) {
+			
+			console.log(event)
+
+			if(mode === 'light') {
+				body.classList.replace("light","dark")
+				button.innerHTML = "Click Me For Light Mode"
+				mode = 'dark'
+			}
+
+			else {
+				body.classList.replace("dark","light")
+				button.innerHTML = "Click Me For Dark Mode"
+				mode = 'light'
+			}
+
+	}
+
+
+	</script>
+	
+
+</body>
+
+</html>
