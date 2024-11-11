@@ -1,0 +1,21 @@
+.styleOne {
+	color: purple;
+	background-color: orange;
+	font-size: 2rem;
+	font-family: "Comic Sans MS";
+}
+
+
+.styleTwo {
+	color: magenta;
+	background-color: cyan;
+	font-size: 5rem;
+	font-family: "Impact";
+}
+
+.styleThree {
+	color: red;
+	background-color: pink;
+	font-size: 2.4rem;
+	font-family: "Times New Roman"
+}
