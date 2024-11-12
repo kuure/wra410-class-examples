@@ -13,3 +13,9 @@ command line as well as a simple HTTP server.
 The `class-manipuluation` folder is a template for setting up CSS and JS
 that changes the classList attribute to modify the appearance of an
 element.
+
+
+### Wednesday
+
+The `class-manipulation` code is complete and functional; this version is
+commented and explains how things work.
