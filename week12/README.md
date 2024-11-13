@@ -19,3 +19,6 @@ element.
 
 The `class-manipulation` code is complete and functional; this version is
 commented and explains how things work.
+
+The `react-demo` is a simple example of a React application with two
+components.
