@@ -1,0 +1,10 @@
+/* styling for anything in the index.html file */
+
+body {
+	background-color: hsl(47 100% 62%);
+	padding: 1rem;
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 1.25rem;
+}
+
+
