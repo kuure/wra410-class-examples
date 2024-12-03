@@ -1,0 +1,12 @@
+.cold {
+	background-color: hsl(213 76% 80%);
+}
+
+.medium {
+	background: hsl(288 76% 80%);
+}
+
+.warm {
+	background-color: hsl(360 76% 80%);
+}
+
