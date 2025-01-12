@@ -1,7 +1,10 @@
-# WRA 410
+# WRA 410 Class Examples
 
-## Class Repository
+## Spring 2025
 
-This git repository ('repo') will contain all the code displayed or talked about in class.
+This repository will contain:
 
-Instructions for following along will be discussed in class.
+- Any code examples from class in a folder corresponding to the week of
+  the semester
+- Any lecture notes in markdown format in the `lecture-notes` folder
+
