@@ -1,11 +1,4 @@
----
-course: "wra410"
-type: "doc"
-slug: "/html/introduction"
-published: "true"
-category: "html"
-title: " HTML Re-Introduction"
----
+# HTML Re-Introduction
 
 ## Definition
 
