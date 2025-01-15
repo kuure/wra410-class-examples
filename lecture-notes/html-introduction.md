@@ -19,7 +19,7 @@ viewer.
 ## Where Did HTML Come From?
 
 HTML was invented in 1989 by Sir Tim Berners-Lee, a computer scientist who was
-working at physics lab in Switzerland. He developed the markup language, and
+working at a physics lab in Switzerland. He developed the markup language, and
 the *protocol* (called *hypertext transfer protocol*, or *HTTP*) for making
 documents available via the computer network called the *internet*. This system
 of interconnected web documents became known as the World Wide Web, or WWW.
