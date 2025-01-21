@@ -9,12 +9,12 @@ This repository will contain:
 - Any lecture notes in markdown format in the `lecture-notes` folder
 
 
-### [Week 01](week01/README.md)
+### [Week 01](week01/)
 
 Class intro, basic HTML starter file
 
 
-### [Week 02](week02/README.md)
+### [Week 02](week02/)
 
 Adding CSS
 
