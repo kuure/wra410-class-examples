@@ -11,10 +11,27 @@ This repository will contain:
 
 ### [Week 01](week01/)
 
-Class intro, basic HTML starter file
+
+Starting with HTML:
+
+- [HTML Introduction](lecture-notes/html-introduction.md)
+
+
+Code Example: 
+
+- [HTML Example File](week01/html-example)
+
 
 
 ### [Week 02](week02/)
 
-Adding CSS
+Adding CSS:
 
+- [CSS Introduction](lecture-notes/css-introduction.md)
+- [CSS Box Model](lecture-notes/css-introduction.md)
+- [CSS Fonts](lecture-notes/css-introduction.md)
+
+
+Code Example: 
+
+- [CSS Example File](week02/css-example)
