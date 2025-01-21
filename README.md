@@ -12,12 +12,12 @@ This repository will contain:
 ### [Week 01](week01/)
 
 
-Starting with HTML:
+#### Starting with HTML:
 
 - [HTML Introduction](lecture-notes/html-introduction.md)
 
 
-Code Example: 
+#### Code Example: 
 
 - [HTML Example File](week01/html-example)
 
@@ -25,13 +25,12 @@ Code Example:
 
 ### [Week 02](week02/)
 
-Adding CSS:
+#### Adding CSS:
 
-- [CSS Introduction](lecture-notes/css-introduction.md)
-- [CSS Box Model](lecture-notes/css-introduction.md)
-- [CSS Fonts](lecture-notes/css-introduction.md)
+- [CSS Introduction](lecture-notes/css-introduction.md), [CSS Box
+  Model](lecture-notes/css-introduction.md), [CSS Fonts](lecture-notes/css-introduction.md)
 
 
-Code Example: 
+#### Code Example: 
 
 - [CSS Example File](week02/css-example)
