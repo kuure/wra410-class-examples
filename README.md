@@ -11,5 +11,10 @@ This repository will contain:
 
 ### [Week 01](week01/README.md)
 
+Class intro, basic HTML starter file
+
+
 ### [Week 02](week02/README.md)
+
+Adding CSS
 
