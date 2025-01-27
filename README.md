@@ -28,9 +28,18 @@ This repository will contain:
 #### Adding CSS:
 
 - [CSS Introduction](lecture-notes/css-introduction.md), [CSS Box
-  Model](lecture-notes/css-introduction.md), [CSS Fonts](lecture-notes/css-introduction.md)
+  Model](lecture-notes/css-box-model.md), [CSS Fonts](lecture-notes/css-fonts.md)
 
 
 #### Code Example: 
 
 - [CSS Example File](week02/css-example)
+
+
+
+
+### [Week 03](week03/)
+
+
+- [CSS Box Model / Fonts Example File](week02/css-box-and-fonts)
+
