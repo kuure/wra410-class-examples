@@ -41,5 +41,7 @@ This repository will contain:
 ### [Week 03](week03/)
 
 
+#### Code Example: 
+
 - [CSS Box Model / Fonts Example File](week02/css-box-and-fonts)
 
