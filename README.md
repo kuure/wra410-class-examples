@@ -45,3 +45,13 @@ This repository will contain:
 
 - [CSS Box Model / Fonts Example File](week02/css-box-and-fonts)
 
+
+
+
+
+
+### [Week 04](week04/)
+
+- [Flexbox](lecture-notes/css-flexbox.md) and [CSS Transitions](lecture-notes/css-transitions.md)
+
+

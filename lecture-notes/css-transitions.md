@@ -1,5 +1,6 @@
 # CSS Transitions
 
+
 CSS transitions allow you to animate CSS properties smoothly over a period of time.
 
 Transitions are triggered by a particular user action, and are often bound to a
@@ -43,7 +44,7 @@ div:hover {
 ```
 
 This will still cause the `<div>` to grow from 10rem wide to 20rem
-wide, because the **transition-property:** is set to *width*.
+wide, because the **stransition-property:** is set to *width*.
 However, the transition will start 0.5 seconds after you hover
 (**transition-delay:**), will take 1 second to complete
 (**transition-duration:**), and the transition will happen in a
