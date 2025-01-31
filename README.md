@@ -4,8 +4,7 @@
 
 This repository will contain:
 
-- Any code examples from class in a folder corresponding to the week of
-  the semester
+- Any code examples from shown or modified in class 
 - Any lecture notes in markdown format in the `lecture-notes` folder
 
 
@@ -27,8 +26,9 @@ This repository will contain:
 
 #### Adding CSS:
 
-- [CSS Introduction](lecture-notes/css-introduction.md), [CSS Box
-  Model](lecture-notes/css-box-model.md), [CSS Fonts](lecture-notes/css-fonts.md)
+- [CSS Introduction](lecture-notes/css-introduction.md)
+- [CSS Box Model](lecture-notes/css-box-model.md)
+- [CSS Fonts](lecture-notes/css-fonts.md)
 
 
 #### Code Example: 
@@ -51,4 +51,13 @@ This repository will contain:
 
 - [CSS Transitions](lecture-notes/css-transitions.md)
 - [Flexbox](lecture-notes/css-flexbox.md)
+
+
+#### Code Example: 
+
 - [CSS Transition example](examples/css-transitions)
+
+
+
+
+

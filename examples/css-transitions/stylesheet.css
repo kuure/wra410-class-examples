@@ -1,0 +1,90 @@
+/* this is a css reset - it fixes a weird box model problem */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* all divs share these properties */
+div {
+	background-color: yellow;
+	width: 10rem;
+	height: 10rem;
+	padding: 1.5rem;	
+	font-size: 1.5rem;
+	margin: 2rem;
+	box-shadow: .5rem .5rem .5rem rgba(0, 0, 3, .1);
+}	
+
+
+
+#one {
+	/* change the CSS width property */
+	transition-property: width;
+	/* make that change take one whole second to complete */
+	transition-duration: 1s;
+	/* have the transtion happen slowly at first, and quickly at the end */
+	transition-timing-function: ease-in;
+	/* wait half a second after the mouse hovers before starting */
+	transition-delay: .5s;
+
+	/*
+	shorthand for above:
+	transition: width 1s ease-in .5s;
+ */
+}
+
+#one:hover {
+	/* the hover state only has to list the value(s) that
+	are different from the default state */
+	width: 20rem;
+}
+
+
+#two {
+	/* list multiple items to change at one time */
+	transition: width 2s, height 2s, background-color 2s;
+}	
+
+
+#two:hover {
+	width: 20rem; 
+	height: 20rem;
+	background-color: orange;
+}
+
+
+
+#three {
+	/* 
+	multiple items, all with different properties
+	these are listed on separate lines for clarity,
+	but can all be on a single line separated by
+	commas
+
+	this would be equally valid: 
+
+	transition: width 2s ease-in 0s, height 2s ease-in-out .5s, background-color 4s ease-out 4s, font-size 2s ease-in-out .5s;
+
+	*/
+	transition: width 2s ease-in 0s, 
+	height 2s ease-in-out .5s,
+	background-color 4s ease-out 4s,
+	font-size 2s ease-in-out .5s;
+}
+
+#three:hover {
+	width: 20rem; 
+	height: 20rem;
+	background-color: orange;
+	font-size: 3rem;
+}
+
+
+#four {
+	transition: transform 3s ease-in 1s;
+}
+
+#four:hover {
+	transform: rotate(180deg);
+}
