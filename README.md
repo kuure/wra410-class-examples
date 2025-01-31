@@ -9,7 +9,7 @@ This repository will contain:
 - Any lecture notes in markdown format in the `lecture-notes` folder
 
 
-### [Week 01](week01/)
+### Week 01
 
 
 #### Starting with HTML:
@@ -19,11 +19,11 @@ This repository will contain:
 
 #### Code Example: 
 
-- [HTML Example File](week01/html-example)
+- [HTML Example File](examples/html-example)
 
 
 
-### [Week 02](week02/)
+### Week 02
 
 #### Adding CSS:
 
@@ -33,22 +33,22 @@ This repository will contain:
 
 #### Code Example: 
 
-- [CSS Example File](week02/css-example)
+- [CSS Example File](examples/css-example)
 
 
 
 
-### [Week 03](week03/)
+### Week 03
 
 
 #### Code Example: 
 
-- [CSS Box Model / Fonts Example File](week02/css-box-and-fonts)
+- [CSS Box Model / Fonts Example File](examples/css-box-and-fonts)
 
 
 
-### [Week 04](week04/)
+### Week 04
 
 - [CSS Transitions](lecture-notes/css-transitions.md)
 - [Flexbox](lecture-notes/css-flexbox.md)
-- [CSS Transition example](week04/css-transitions)
+- [CSS Transition example](examples/css-transitions)
