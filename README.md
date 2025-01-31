@@ -47,11 +47,8 @@ This repository will contain:
 
 
 
-
-
-
 ### [Week 04](week04/)
 
-- [Flexbox](lecture-notes/css-flexbox.md) and [CSS Transitions](lecture-notes/css-transitions.md)
-
-
+- [CSS Transitions](lecture-notes/css-transitions.md)
+- [Flexbox](lecture-notes/css-flexbox.md)
+- [CSS Transition example](week04/css-transitions)
