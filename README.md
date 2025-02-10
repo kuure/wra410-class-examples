@@ -59,5 +59,16 @@ This repository will contain:
 
 
 
+### Week 05
+
+- [Navigation Examples](examples/navigation-examples)
+- [CSS Media Queries](lecture-notes/css-media-queries.md)
+
+
+#### Code Example: 
+
+- [Media Query Example](examples/media-query.html)
+
+
 
 
