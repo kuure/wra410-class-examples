@@ -63,12 +63,14 @@ This repository will contain:
 
 - [Navigation Examples](examples/navigation-examples)
 - [CSS Media Queries](lecture-notes/css-media-queries.md)
+- Image size and resolution
+- Favicons
+- Accessibility and SEO
 
-
-#### Code Example: 
+#### Code Examples: 
 
 - [Media Query Example](examples/media-query.html)
-
+- [Image Examples](examples/image-examples)
 
 
 
