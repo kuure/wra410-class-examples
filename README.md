@@ -81,6 +81,7 @@ This repository will contain:
 - [JavaScript DOM HTML Example](examples/javascript-dom.html)
 
 - [JavaScript DOM Scavenger Hunt](examples/dom-scavenger-hunt)
+  - [Zip Download](examples/dom-scavenger-hunt.zip)
 
 
 
