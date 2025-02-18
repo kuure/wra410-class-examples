@@ -79,3 +79,9 @@ This repository will contain:
 - [JavaScript Introduction](lecture-notes/javascript-introduction.md)
 - [JavaScript DOM](lecture-notes/javascript-dom.md)
 - [JavaScript DOM HTML Example](examples/javascript-dom.html)
+
+- [JavaScript DOM Scavenger Hunt](examples/dom-scavenger-hunt)
+
+
+
+
