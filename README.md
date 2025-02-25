@@ -84,5 +84,10 @@ This repository will contain:
   - [Zip Download](examples/dom-scavenger-hunt.zip)
 
 
+### Week 06
+
+- [HTML Form Elements](examples/form-elements.html)
+- [JavaScript Events](lecture-notes/javascript-events.md)
+- [JavaScript Form and Event Example](examples/javascript-forms.html)
 
 
