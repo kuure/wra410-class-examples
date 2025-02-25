@@ -11,7 +11,6 @@
 
 		<style>
 
-
 			body {
 				background-color: #efefef;
 				font-family: "Helvetica", "Arial", sans-serif;
@@ -26,10 +25,8 @@
 				border: none;
 				display: flex;
 				flex-direction: column;
-
 			}
 
-			
 			fieldset > label {
 				font-weight: bold;
 				padding-top: 1rem;
@@ -69,9 +66,9 @@
 			
 				<label for="major" class="five">Major:</label>
 				<select id="major" class="six">
-					<option>Experience Architecture (XA)</option>
-					<option>Professional and Public Writing (P2W))</option>
-					<option>Other</option>
+					<option value="xa">Experience Architecture (XA)</option>
+					<option value="p2w">Professional and Public Writing (P2W))</option>
+					<option value="other">Other</option>
 				</select>
 		
 			</fieldset>
@@ -87,27 +84,27 @@
 		const major = document.querySelector("#major")
 
 
-		firstName.addEventListener("click", () => {
-			console.log("First Name Clicked");
+		// print the contents of the box to the console when any text is entered
+		firstName.addEventListener("input", () => {
+			console.log(firstName.value)
 		})
 
-		/*
 
-		firstName.addEventListener("", () => {
-			// print the text from the box to the console when it changes...			
-		})
-
-		*/
-
+		// message when you "focus" the last name input
 		lastName.addEventListener("focus", () => {
 			console.log("Last Name Focused")
 		})
 
+		// message when you "blur" the last name input
+		lastName.addEventListener("blur", () => {
+			console.log("Last Name Blurred")
+		})
 
+
+		// print the current value to the console when changed
 		major.addEventListener("change", () => {
 			console.log("Drop Down Changed")
-			// print the current value to the console...
-
+			console.log(major.value)
 		})
 
 
