@@ -96,7 +96,7 @@ This repository will contain:
 
 ### Week 08
 
-- [Formatting Objects](examples/format-object.html)
+- [Formatting Objects](examples/format-object/)
   - [Zip Download](examples/format-object.zip)
 
 ### Week 09
