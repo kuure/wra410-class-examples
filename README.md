@@ -96,5 +96,6 @@ This repository will contain:
 
 ### Week 08
 
-- [JavaScript Data Example](examples/javascript-data.html)
+- [Formatting Objects](examples/format-object.html)
+  - [Zip Download](examples/format-object.zip)
 
