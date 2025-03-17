@@ -1,6 +1,15 @@
 // the url for any API that returns JSON data
 const url = "https://jsonplaceholder.typicode.com/users"
 
+const container = document.querySelector(".container")
+
+// call the function at the bottom to set everything in motion
+// it will fetch the data from the URL, then call the buildPage()
+// function above with the results in JSON format
+fetchRemoteData(url)
+
+
+
 
 // this function deals with your data, you can customize
 // it to do whatever you need to do
@@ -11,13 +20,18 @@ function buildPage(jsonData) {
 
 	// what else do you want to do with it...?
 
+	const newHTML = jsonData.map( person => {
+		return(`
+			<h1>${person.name}</h1>
+			<h2>${person.phone}</h2>
+		`)
+	}).join("")
+
+	container.innerHTML = newHTML
+
 }
 
 
-// call the function at the bottom to set everything in motion
-// it will fetch the data from the URL, then call the buildPage()
-// function above with the results in JSON format
-fetchRemoteData(url)
 
 
 
