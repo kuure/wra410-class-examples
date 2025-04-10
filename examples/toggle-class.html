@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<head>
+
+<title>WRA410 Replacing CSS Classes</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+.dark {
+	color: white;
+	background-color: black;
+}
+
+.light {
+	color: black;
+	background-color: white;
+}
+
+.box {
+	background-color: rgb(255,0,255);
+}
+
+</style>
+
+
+</head>
+
+
+<body>
+
+<button class="modeButton">Change Mode</button>
+
+<h1>WRA410 Replacing CSS Classes</h1>
+
+<p>This page contains examples of using the .replace() and .toggle()
+methods on the classList of HTML elements.</p>
+
+<p>You can add, remove, replace, or toggle CSS classes to apply totally
+different styles as needed.</p>
+
+<button class="headlineButton">Toggle Headline Style</button>
+
+
+
+
+<script>
+
+	// query selectors for the items we want access to
+	const mode = document.querySelector("body")
+	const headline = document.querySelector("h1")
+	const modeButton = document.querySelector(".modeButton")
+	const headlineButton = document.querySelector(".headlineButton")
+
+
+
+	// listen for clicks on the mode button
+	modeButton.addEventListener("click", () => {
+
+    // if the classList - an array of all the classes applied
+		// to an element - contains the string "light", we want to
+		// replace that value with "dark"
+		if(mode.classList.contains("light")) {
+			// replace an existing value with a new one
+			mode.classList.replace("light","dark")
+			// might as well change the <button> text 
+			modeButton.innerHTML = "Switch to Light Mode"
+		}
+		// if the classList contains "dark", we want to replace it
+		// with "light"
+		else if (mode.classList.contains("dark")) {
+			mode.classList.replace("dark","light")
+			modeButton.innerHTML = "Switch to Dark Mode"
+		} 
+		// this catches any other situation, like when the page
+		// first loads and the body has no class applied to it 
+		else {
+			mode.classList.add("dark")
+			modeButton.innerHTML = "Switch to Light Mode"
+		}
+
+	})
+
+
+	// this adds or removes the "box" class depending on the current value
+	headlineButton.addEventListener("click", () => {
+		headline.classList.toggle("box")
+	})
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
