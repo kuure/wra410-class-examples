@@ -118,6 +118,7 @@ This repository will contain:
 
 
 ### Week 12
+- [Changing CSS Classes](examples/toggle-class.html)
 
 
 ### Week 13
