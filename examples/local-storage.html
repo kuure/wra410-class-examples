@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<head>
+
+<title>HTML Local Storage</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+
+<body>
+
+<h1>HTML Local Storage</h1>
+
+<p>
+	<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage</a>
+</p>
+
+<div>
+	<h2>Add Local Storage Item:</h2>
+
+	<div>
+		<label for="keyInput">Key:</label>
+		<input type="text" id="keyInput">
+		<label for="valueInput">Value:</label>
+		<input type="text" id="valueInput">
+		<button id="add">Add</button>
+	</div>
+
+	<div>
+		<button id="remove">Remove All</button>
+	</div>
+
+	<div>
+		<button id="show">Show All</button>
+	</div>
+
+</div>
+
+
+<script>
+
+const keyInput =  document.querySelector("#keyInput")
+const valueInput =  document.querySelector("#valueInput")
+
+const remove =  document.querySelector("#remove")
+const add =  document.querySelector("#add")
+const show =  document.querySelector("#show")
+
+// add a new item
+add.addEventListener("click", () => {
+	// get the values from the text boxes
+	const keyVal = keyInput.value
+	const valueVal = valueInput.value
+
+	// set the key and value pair
+	localStorage.setItem(keyVal,valueVal)
+
+	// log things
+	console.log("New Item Added")
+	console.log("Current Local Storage Values:",localStorage)
+
+	// reset the text boxes to empty
+	keyInput.value = ""
+	valueInput.value = ""
+})	
+
+
+
+// remove all values
+// it would probably be a good idea to warn the user about this
+remove.addEventListener("click", () => {
+	localStorage.clear()
+})	
+
+
+// show current values
+show.addEventListener("click", () => {
+	console.log(localStorage)
+})	
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
