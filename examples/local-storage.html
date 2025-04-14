@@ -58,8 +58,15 @@ add.addEventListener("click", () => {
 	localStorage.setItem(keyVal,valueVal)
 
 	// log things
-	console.log("New Item Added")
-	console.log("Current Local Storage Values:",localStorage)
+	console.log(`New Item Added: { ${keyVal}, "${valueVal}"}`)
+	console.log("Current Values:",localStorage)
+
+
+	// here's how you access values by key
+	console.log(localStorage.getItem(keyVal))
+
+
+
 
 	// reset the text boxes to empty
 	keyInput.value = ""
@@ -69,8 +76,8 @@ add.addEventListener("click", () => {
 
 
 // remove all values
-// it would probably be a good idea to warn the user about this
 remove.addEventListener("click", () => {
+	console.log(`Removing All Local Storage Elements`)
 	localStorage.clear()
 })	
 
