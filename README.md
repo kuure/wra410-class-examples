@@ -123,5 +123,15 @@ This repository will contain:
 
 ### Week 13
 
+Email Forms
+
+- [Netlify Forms](examples/netlify-form.html)
+- [formsubmit.co Forms](examples/formsubmit-form.html)
+
+
+Animation
+
+- [CSS Animation Example](examples/animation.html)
+
 
 ### Week 14
