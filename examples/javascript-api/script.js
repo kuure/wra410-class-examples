@@ -10,7 +10,6 @@ fetchRemoteData(url)
 
 
 
-
 // this function deals with your data, you can customize
 // it to do whatever you need to do
 function buildPage(jsonData) {
