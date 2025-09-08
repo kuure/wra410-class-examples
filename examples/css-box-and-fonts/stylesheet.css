@@ -1,28 +1,8 @@
-/*
+/* 
 
-google fonts - you can load multiple fonts in a single line to save time
-
-this _must_ be the first line in your CSS
-
-to get the code you need to choose the "get embed code" button, then select
-the @import button
-
-remove the <style> and </style> tags - those are HTML and don't belong in a CSS file
-*/
-
-
-
-
-
-/*
-
-Style Requirements:
-
-- a thin visible border
-- a different background color than the <body> and each other
-- rounded corners
-- enough white space between the text and border to be easily readable. 
-- the <h1> and <p> tags need to be in different Google Fonts
+Add the CSS reset to the stylesheet
+Give both boxes the same style - border color, background color, etc.
+Give both boxes rounded corners.
+Make each box use a separate Google font
 
 */
-

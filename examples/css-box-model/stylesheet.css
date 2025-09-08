@@ -1,0 +1,17 @@
+/*
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+*/
+
+
+.box {
+	background-color: hsl(193, 100%, 87%);
+	border: 2px solid rgb(252, 3, 232);
+	padding: 1rem;
+	width: 40rem;
+}
+
