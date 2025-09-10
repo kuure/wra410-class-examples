@@ -1,17 +1,22 @@
-/*
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
 *,
 *::before,
 *::after {
 	box-sizing: border-box;
 }
 
-*/
+body {
+	font-family: "Arvo", serif;
+}
 
 
 .box {
-	background-color: hsl(193, 100%, 87%);
+	background-color: hsl(180, 100%, 50%);
 	border: 2px solid rgb(252, 3, 232);
-	padding: 1rem;
-	width: 40rem;
+	padding: 10px;
+	width: 400px;
+
 }
 
