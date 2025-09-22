@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+
+/* the default style */
+nav {
+	background-color: pink;
+}
+
+nav ul {
+	/* display: flex; */
+}
+
+
+
+/* IF the screen is AT LEAST 769px... */ 
+@media screen and (min-width: 769px) {
+
+	nav {
+		/* this rule takes over - it cancels out the previous one */
+		background-color: lightblue;
+
+		/* you can change anything here */
+		font-weight: bold;
+	}
+
+}
+
+
