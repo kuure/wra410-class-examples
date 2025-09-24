@@ -14,6 +14,7 @@ Assuming your username is `kuure`:
 
 ## fall 2025 Links:
 
+|---|---|
 | https://github.com/bayikipek      | http://bayikipek.github.io      |
 | https://github.com/ericchesney99  | http://ericchesney99.github.io  |
 | https://github.com/edenk314       | http://edenk314.github.io       |
