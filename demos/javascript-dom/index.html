@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<head>
+  <title>WRA410  JavaScript Introduction</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+<h1>The JavaScript Document Object Model</h1>
+
+
+<p class="demo">This is the original text</p>
+
+
+<ul>
+	<li>Bullet Item One</li>
+	<li>Bullet Item Two</li>
+	<li>Bullet Item Three</li>
+</ul>
+
+
+<ol>
+	<li>Number Item One</li>
+	<li>Number Item Two</li>
+	<li>Number Item Three</li>
+</ol>
+
+
+
+<script>
+
+	// this is whole document
+	console.log(document);
+
+	// one property is its "location"":
+	console.log(document.location);
+
+	// there is a method called 'querySelector()' that allows you
+	// to grab elements using the same syntax as CSS selectors
+	const headline = document.querySelector("h1");
+
+	// you are selecting the HTML element itself
+	console.log(headline)
+
+	// it also has properties 
+	console.log(headline.innerText);
+
+
+
+</script>
+
+
+
+</body>
+</html>
