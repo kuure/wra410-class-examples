@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<title>WRA410 DOM Scavenger Hunt</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+<!--
+
+Save this document to your computer and open it in Visual Studio Code
+
+Using JavaScript, select elements from the document as specified and style them accordingly
+
+-->
+
+<h1>Make this say "DOM Scavenger Hunt"</h1>
+
+
+<p class="green-text">Make this text green. Also, make ALL the paragraph
+elements have a border or background color of some sort.</p>
+
+
+<ul class="cymk">
+	<li>give me a cyan background</li>
+	<li>give me a magenta background</li>
+	<li>give me a yellow background</li>
+	<li>give me a black background, but with white text</li>
+</ul>
+
+
+<h2>This Element Should Be Showing </h2>
+
+<h2>This Element Should Not</h2>
+
+
+<div class="bats">
+	<img src="bats.jpg" alt="Release The Bats!">
+	<p>Make us look like we're standing instead of hanging...</p>
+</div>
+
+
+<p>This is another paragraph that is here for formatting purposes.</p>
+
+<p>So is this.</p>
+
+<script>
+
+// this script block can go anywhere, but it's best
+// if it goes right at the end, before the close of
+// the body tag
+
+// get started by using document.querySelector() to pick elements
+
+// all your javascript code goes below:
+
+
+// we want the first (and only) h1 on the page
+// so regular query selector grabs it 
+//const h1 = document.querySelector("h1");
+
+// set the 'innerHTML' property to a new value
+//h1.innerHTML = "DOM Scavenger Hunt";
+
+
+// select all the <p> tags and give them the same style
+//const pTags = document.querySelectorAll("p");
+//pTags.forEach(para => para.style.backgroundColor = "lightblue");
+
+
+
+// this first one has a class so use that for the selector
+//const p = document.querySelector('.green-text');
+//p.style.color = "green";
+
+
+
+// there are TWO h2 tags so we need to isolate 
+// the second one using a more complex css selector
+//const h2 = document.querySelector("h2:nth-of-type(2)");
+
+
+// by default the "display" property is either block 
+// or inline; this sets it to not show up at all
+//h2.style.display = "none";
+
+// you can also change the visibility property,
+// which hides it but leaves space for it
+//h2.style.visibility = "hidden";
+
+
+// only one image so no need to be picky
+//const img = document.querySelector("img");
+// ANY css property can be manipulated
+//img.style.transform = "rotate(180deg)";
+
+
+// get the outer container so we can 
+// use query selector AGAIN inside it...
+//const ul = document.querySelector("ul");
+
+// first one is easy, there is Javascript shorthand
+// for the first child element
+//ul.firstElementChild.style.backgroundColor = "cyan";
+
+// same with the last one
+//ul.lastElementChild.style.backgroundColor = "black";
+//ul.lastElementChild.style.color = "white";
+
+
+
+// the other two are harder; there are ways in JS
+// to do this but CSS is sometimes easier
+//ul.querySelector("li:nth-child(2)").style.backgroundColor="magenta";
+//ul.querySelector("li:nth-child(3)").style.backgroundColor="yellow";
+
+
+
+
+</script>
+
+
+</body>
+</html>

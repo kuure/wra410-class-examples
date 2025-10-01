@@ -27,7 +27,7 @@ Using JavaScript, select elements from the document as specified and style them 
 elements have a border or background color of some sort.</p>
 
 
-<ul class="cymk">
+<ul class="cmyk">
 	<li>give me a cyan background</li>
 	<li>give me a magenta background</li>
 	<li>give me a yellow background</li>
@@ -62,9 +62,30 @@ elements have a border or background color of some sort.</p>
 // all your javascript code goes below:
  
 
+const h1 = document.querySelector("h1");
+const pTags = document.querySelectorAll("p");
+const greenText = document.querySelector(".green-text");
+const cmyk = document.querySelector(".cmyk");
+const lasth2 = document.querySelector("h2:last-of-type");
+const img = document.querySelector("img");
 
 
+h1.innerHTML = "DOM Scavenger Hunt";
 
+pTags.forEach( p => p.style.backgroundColor = "lightblue");
+
+greenText.style.color = "green";
+
+lasth2.style.visibility = "hidden";
+
+img.style.transform = "rotate(180deg)";
+
+
+cmyk.querySelector("li:first-of-type").style.backgroundColor = "cyan";
+cmyk.querySelector("li:last-of-type").style.backgroundColor = "black";
+cmyk.querySelector("li:last-of-type").style.color = "white";
+cmyk.querySelector("li:nth-child(2)").style.backgroundColor = "magenta";
+cmyk.querySelector("li:nth-child(3)").style.backgroundColor = "yellow";
 
 
 
