@@ -1,9 +1,28 @@
 // define the button
 const myButton = document.querySelector("button");
 
+// what do we want to style?
+const body = document.querySelector("body");
+
+
+
 // add an event listener for the 'click' event
 myButton.addEventListener("click", () => {
+
 	console.log("you clicked the button")
+
+	const color1 = randomRGBColor();
+	const color2 = randomRGBColor();
+	const color3 = randomRGBColor();
+
+
+	console.log(color1,color2,color3);
+
+	myButton.style.color = color1;
+	myButton.style.backgroundColor = color2;
+	body.style.backgroundColor = color3;
+
+
 })
 
 
