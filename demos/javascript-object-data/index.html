@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
 
@@ -20,16 +20,30 @@
 
 <script>
 
-	
-// make your object
-const meObject = {
+const container = document.querySelector(".container");
 
+
+// make your object
+const personOne = {
+  "firstName" : "Jeff",
+  "lastName" : "Kuure",
+  "birthYear" : 1974,
+  "currentlyAlive" : true
 }
 
 
 // get your values printed below
 
+const newHTML = `
+<h1>${personOne.firstName} ${personOne.lastName}</h1>
+<h2>${personOne.birthYear}</h2>
+<ul>
+  <li>${personOne.currentlyAlive}</li>
+</ul>
+`;
 
+
+container.innerHTML = newHTML;
 
 
 
