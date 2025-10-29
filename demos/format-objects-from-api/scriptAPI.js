@@ -12,10 +12,6 @@ const container = document.querySelector(".container")
 fetchRemoteData(url)
 
 
-// call the funtion to generate the HTML
-container.innerHTML = buildPage(data);
-
-
 
 // the function that formats the data and returns HTML
 function buildPage(dataArray) {
@@ -37,7 +33,7 @@ function buildPage(dataArray) {
 	</div>
 	`)}).join("");
 
-	return(dataHTML);
+	container.innerHTML = dataHTML;
 
 }
 
