@@ -12,9 +12,8 @@ const container = document.querySelector(".container")
 fetchRemoteData(url)
 
 
-
 // the function that formats the data and returns HTML
-function buildPage(dataArray) {
+function buildPage(dataArray,element) {
 
 	const dataHTML = dataArray.map(dataItem => {
 
@@ -33,7 +32,7 @@ function buildPage(dataArray) {
 	</div>
 	`)}).join("");
 
-	container.innerHTML = dataHTML;
+	element.innerHTML = dataHTML;
 
 }
 
@@ -50,7 +49,7 @@ fetch() tool to get the remote data in the background
 if the respons from the server is not ok, it prints an error message
 
 otherwise, it takes the results, turns them into JSON, and passes them to
-the function named "buildPage()"
+the function named "buildPage()" along with the element to fill with the new HTML
 
 */
 
@@ -60,6 +59,6 @@ async function fetchRemoteData(location) {
 		throw new Error(`An error has occured: ${response.status}`)
 	}
 	const jsonResponse = await response.json()
-	buildPage(jsonResponse)	
+	buildPage(jsonResponse,container)	
 }
 
