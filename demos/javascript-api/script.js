@@ -1,42 +1,52 @@
-// the url where we get the JSON data
+// the url for any API that returns JSON data
 const url = 'https://jsonplaceholder.typicode.com/users'; 
 
 // the html container
-const container = document.querySelector('.container');
+const container = document.querySelector(".container");
 
+// immediately call the function that runs all the other functions
+doTheWholeThing();
 
+async function doTheWholeThing() {
 
+	// first, get the remote data
+	const data = await getData();
+	// when we have it, print to the console
+	console.log(data);
 
-// run everything by calling the 'doTheWholeThing()' function with the URL as an argument
-doTheWholeThing(url);
-
-
-// the function that runs everything
-async function doTheWholeThing(url) {
-	// get the data
-	const data = await getData(url);
-	// pass the data and contiainer to the function that formats everything
-	formatData(data,container);
+	// then pass the data to a function that does *something* to it
+	const result = processData(data);
+	
+	// finally, print the processed data to the console 
+	// and insert the results into the container element
+	console.log(result);
+	container.innerHTML = result;
 }
 
 
-
-// the function that gets the data
-async function getData(url) {
+// the function that fetches the remote data
+async function getData() {
 	const response = await fetch(url);
-	const data = await response.json();
-	return data;
+	// check for any errors
+	if (!response.ok) {
+		throw new Error(`An error has occured: ${response.status}`)
+	}
+	const json = await response.json();
+	return json; // returns the JSON data
 }
 
 
+// the function that processes the data into HTML
+function processData(dataArray) {
 
-// the unction that processes the data and formatted HTML
-function formatData(data) {
-	const newHTML = data.map( person => {
+	// use the .map() tool to chop up and format parts
+	// of the data 
+	const formattedData = dataArray.map( dataItem => {
 		return(`
-			<h1>${person.name}</h1>
-			<h2>${person.phone}</h2>
-		`)
-	}).join("")
-	return(newHTML);
+		<div class="item">
+		<h1>${dataItem.name}</h1>
+		<h2>${dataItem.username}</h2>
+		</div>
+	`)}).join("");
+	return(formattedData);
 }
