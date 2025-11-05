@@ -1,5 +1,5 @@
 // the hourly forecast API 
-const url = "https://api.weather.gov/gridpoints/GRR/82,39/forecast/hourly"
+const url = "https://api.weather.gov/gridpoints/GRR/82,39/forecast/hourly";
 
 // the html container
 const container = document.querySelector(".container");
@@ -48,7 +48,7 @@ function processData(dataArray) {
 	// just get the 'temperature' property from the 'today' variable
 	const temp = today.temperature;
 
-	// create a variable that does not have a value assigned yet
+	// create a var that does not have a value assigned yet
 	// we need to give this a value later so we use 'let'
 	let style;
 
@@ -57,17 +57,14 @@ function processData(dataArray) {
 	if(temp >= 80) {
 		style ="hot";
 	}
-	
 	// if the temp is less than 80 AND equal or greater than 65
 	else if(temp < 80 && temp >= 65) {
 		style ="warm";
 	}
-
 	// if the temp is less than 65 AND equal or greater than 40
 	else if(temp < 65 && temp >= 40) {
 		style ="chilly";
 	}
-	
   // if the temp is less than 40
 	else if(temp < 40) {
 		style = "cold"
@@ -81,8 +78,6 @@ function processData(dataArray) {
 		${temp}
 	</div>
 	`;
-
-	// return the formatted string of text
 	return(output)
 
 }
