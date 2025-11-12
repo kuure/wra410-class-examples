@@ -73,20 +73,16 @@ different styles as needed.</p>
 
 		console.log('mode button clicked');
 
-
     // if the classList - an array of all the classes applied
-		// to an element - contains the string "light", we want to
-		// replace that value with "dark"
-
-
-		// if the classList contains "dark", we want to replace it
-		// with "light"
-
-
-		// we also need to catch any other situation, like when the page
-		// first loads and the body has no class applied to it 
-
-
+		// to an element contains the string "light" OR has a length of zero,
+		// then set the classList value to "dark"
+		if(mode.classList.contains("light") || mode.classList.length === 0) {
+			mode.classList = "dark";
+		}
+		// in any other situation, make set it to "light" 
+		else {
+			mode.classList = "light";
+		}
 
 	})
 
