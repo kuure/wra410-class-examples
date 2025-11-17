@@ -2,7 +2,11 @@
 const nav = document.querySelector('nav');
 
 // how do we encode our navigation?
-const navLinks = ['Home', 'About', 'Contact'];
+const navLinks = [ 
+	{"url" : '#', "text" : "Home Page"},
+	{"url" : '#about', "text" : "About"},
+	{"url" : '#contact', "text" : "Contact Us"},
+];
 
 // clicking on the links causes the 'hashchange' event
 window.addEventListener('hashchange', () => {
@@ -14,19 +18,24 @@ window.addEventListener('load', () => {
 	buildNav();
 });
 
+
 // build the nav bar from the navLinks array
 function buildNav() {
-	const navHTML = navLinks
-		.map(link => {
-			if (window.location.hash.endsWith(link.toLowerCase())) {
-				return `
-					<li><a href="#${link.toLowerCase()}" class="current">${link}</a></li>
-				`;
-			} else {
-				return `
-					<li><a href="#${link.toLowerCase()}">${link}</a></li>`;
-			}
-		})
-		.join('');
+	
+	const hash = window.location.hash;
+	
+	// loop the links and use .map() to format each one
+	const navHTML = navLinks.map(link => {
+		console.log(hash === "")
+		if (hash.endsWith(link.url)) {
+			return `
+				<li><a href="${link.url}" class="current">${link.text}</a></li>
+			`;
+		} else {
+			return `
+				<li><a href="${link.url}">${link.text}</a></li>`;
+		}
+	})
+	.join('');
 	nav.innerHTML = `<ul>${navHTML}</ul>`;
 }
