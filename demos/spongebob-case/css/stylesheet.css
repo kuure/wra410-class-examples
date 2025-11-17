@@ -1,0 +1,33 @@
+/* set the image to be the background of the container */
+.imageContainer {
+	background-image: url('../img/spongebob.jpg');
+
+	/* these guarentee the size of the image container */
+	min-width: 583px;
+	min-height: 411px;
+	max-width: 583px;
+	max-height: 411px;
+
+}
+
+
+.outputBox {
+	/*  make the text white Impact font */
+	color: white;
+	font-family: "Impact", sans-serif;
+	text-transform: uppercase;
+
+	/*  give the text a text shadow so it will show up better over the image */
+	text-shadow:
+		-3px -3px 0 #000,  
+		3px -3px 0 #000,
+		-3px 3px 0 #000,
+		3px 3px 0 #000;
+
+	/* adjust some other aspects to make it look better */
+	margin: 0;
+	padding: 0.5rem;
+	font-size: 36px;
+	text-align: center;
+}
+

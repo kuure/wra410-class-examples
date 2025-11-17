@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<title>Exasperated Case Generator</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="css/stylesheet.css">
+
+</head>
+
+<body>
+
+	<h1>Exasperated Case Generator</h1>
+
+
+	<!--
+
+	 So what does an application like this need in order to function?
+
+	 In the HTML:
+	  an HTML element that allows a user to input text
+	  an element that can have an image as a background
+	  a place to put the user text over the image
+
+	In the CSS:
+		set the image to be the background of the container
+		make the text white Impact font
+		give the text a text shadow so it will show up better over the image
+
+	In the JavaScript:
+		code that listens for the input event on the text box
+		code that grabs the current value of the input box
+		code that randomly upper or lowercases each letter of the string
+		code that puts the text from the input into the output container
+
+	-->
+
+
+
+	<!-- an element that allows a user to input text -->
+	<input type="text" class='inputBox' autofocus>
+
+	<!-- an element that can have an image as a background -->
+	<div class="imageContainer"> 
+		<!-- a place to put the user text over the image -->
+		<p class="outputBox"></p>
+	</div>
+	
+
+	<!-- link to the script, right before the close of the body tag -->
+	<script src="js/script.js"></script>
+
+</body>
+</html>
