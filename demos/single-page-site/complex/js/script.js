@@ -28,5 +28,5 @@ function buildNav() {
 			}
 		})
 		.join('');
-	nav.innerHTML = navHTML;
+	nav.innerHTML = `<ul>${navHTML}</ul>`;
 }

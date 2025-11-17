@@ -77,7 +77,7 @@ nav ul {
 /* the links inside the list items */
 nav ul li a {
 	/* add padding to make clickable area larger */
-	padding: 12rem;
+	padding: 1rem;
 	color: hsl(0,50%,90%);
 }
 
