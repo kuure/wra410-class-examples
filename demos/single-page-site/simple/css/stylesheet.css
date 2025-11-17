@@ -40,14 +40,16 @@ header {
 	top: 0;
 
 	/* another flex container...? */
-	/*
+
 	display: flex;
 	justify-content: space-between;
-	*/
+
 }
 
 /* the ul that holds the links  */
 nav ul {
+	list-style:none;
+	display: flex;
 }
 
 /* the links inside the list items */
