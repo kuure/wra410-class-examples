@@ -2,27 +2,33 @@
 const input = document.querySelector('.inputBox');
 const output = document.querySelector('.outputBox');
 
-let outputString = '';
+// create an empty string with 'let' so its value can change
+let outputString = "";
+
 
 // code that listens for the input event on the text box
-input.addEventListener('input', () => {
-	// code that grabs the current value of the input box
-	const inputText = input.value;
-	console.log('Input Text:', inputText);
+input.addEventListener('input', (event) => {
+	
+	// the "event" tells us all sorts of info about what the user did
+	console.log(event);
 
-	// make a new array from the input text string
-	const inputTextArray = inputText.split('');
-	console.log('Input Text Array', inputTextArray);
+	// the 'data' property is the most recent change
+	const letter = event.data;
 
-	// make a new array called outputText, using
-	// .map() to change the output of each letter
-	const outputText = inputTextArray.map(letter => {
-		if (Math.random() > 0.5) {
-			return letter.toUpperCase();
-		} else {
-			return letter.toLowerCase();
-		}
-	});
+	// check if a number between 0 and 0.999 is greater than or 
+	// less than 0.5, so essentially a coin toss
+	if (Math.random() > 0.5) {
+		// if it is, make the letter upper case and add it to the end of the
+		// output string
+		outputString += letter.toUpperCase();
+	} else {
+		// otherwise, make it lower case
+		outputString += letter.toLowerCase();
+	}
 
-	output.innerHTML = outputText.join('');
+	// take the current iteration of the output string and put 
+	// it into the container
+	output.innerHTML = outputString;
+
 });
+
