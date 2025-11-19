@@ -19,7 +19,7 @@ input.addEventListener('input', (e) => {
 	
 	// putting a variable name in the parentheses gives you access to
 	// all the information about the event
-	console.log(e);
+	console.log(e.data);
 
 	// the 'data' property is the most recent change
 	const letter = e.data;
