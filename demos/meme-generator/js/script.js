@@ -17,7 +17,8 @@ const yesText = document.querySelector(".yesText");
 // get the current value from yes input whenever 
 // anything is typed (the 'input' event), then 
 // make that value the p tag's innerHTML
-yesBox.addEventListener("input",() => {
+yesBox.addEventListener("input",(e) => {
+	console.log(e)
 	console.log(yesBox.value);
 	yesText.innerHTML  = yesBox.value;
 })
