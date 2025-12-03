@@ -1,0 +1,85 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+	<title>HTML Canvas JavaScript Objects</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<style>
+	canvas {
+		border: 1px solid black;
+		background-color: white;
+		width: 100%;
+	}
+	</style>
+	
+</head>
+
+<body>
+
+<h1>HTML Canvas Using JavaScript and Objects</h1>
+
+<p>Reloading this page will randomly generate a number of circles of different
+	sizes, colors, and location within the canvas</p>
+
+
+<canvas width="800" height="400"></canvas>
+
+
+<script>
+
+// new empty array
+const circles = [];
+
+// how big can they get?
+const maxRadius = 20;
+
+// how many circles total?
+const totalCircles = 100;
+
+// set up a 2d HTML canvas
+const canvas = document.querySelector('canvas');
+const ctx = canvas.getContext('2d');
+
+// the loop that creates all the circles
+for(let i = 0; i < totalCircles; i++) {
+	circles[i] = new Circle();
+	circles[i].draw();
+	console.log(circles[i]);
+}
+
+
+
+// the circle constructor
+function Circle() {
+	this.x = Math.random() * canvas.offsetWidth;
+	this.y = Math.random() * canvas.offsetHeight;
+	this.radius = Math.random() * maxRadius;
+	this.color = randomColor();
+
+	this.draw = function(){
+		ctx.beginPath();
+		ctx.arc(this.x, this.y, this.radius, 0, 2*Math.PI, false);
+		ctx.fillStyle = this.color;
+		ctx.fill();
+		ctx.closePath();
+	}
+}
+
+
+// helper function to generate random colors for each circle
+function randomColor() {
+	function random() {
+		return Math.floor(Math.random() * 255);
+	}
+	return "rgb(" + random() + "," + random() + "," + random() + ")";
+}
+
+
+</script>
+
+</body>
+</html>
