@@ -1,0 +1,24 @@
+/*
+	this resets EVERY css property to have 0 margin, 0 padding, and to size
+	everything based on the size of the container, not the size of the
+	content
+*/
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* add back styles as needed */
+
+h1 {
+	margin: 1rem;
+}
+
+p {
+	margin: 1rem;
+}
+
