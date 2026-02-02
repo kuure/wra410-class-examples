@@ -1,0 +1,10 @@
+/* this is a css reset - it fixes a weird box model problem */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+
+
+
