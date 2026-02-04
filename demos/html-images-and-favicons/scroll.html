@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+
+		<title>Scrolling Full Height Background Image</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="favicon.ico">
+
+		<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", sans-serif;
+}
+
+
+pre {
+	background-color: rgba(240,240,240,1);
+	padding: 1rem 2rem 2rem 2rem;
+	border: 0.02rem solid rgb(20,20,20);
+	font-size: 1rem;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 100vh;
+	background: #637782 url('img/2000_1500.png') no-repeat center; 
+	background-size: cover;
+}
+
+header h1 {
+	margin: 0;	
+	font-size: 6rem;	
+	color: white;
+	text-align: center;
+	max-width: 80%;
+}	
+
+main {
+	margin: 3rem auto 10rem auto;
+	padding: 2rem;
+	max-width: 1000px;
+}
+
+
+		</style>
+
+
+	</head>
+
+	<body>
+
+
+
+		<header>
+			<h1>This Is A Full Screen Image</h1>
+		</header>
+
+
+		<main>
+			<h1>This Is The Main</h1>
+
+			<p>The image above is applied to the &lt;header&gt; element as a
+			background, using the following background properties:</p>
+
+			<pre><code>
+header {
+	background-color: #637782;
+	background-image: url('img/2000_1500.png');
+	background-repeat: no-repeat;
+	background-position: center;  /* "scroll" is the default and not necessary */
+	background-attachment: scroll; 
+	background-size: cover;
+}
+		</pre></code>
+
+
+		<p>This can be shorthanded as well, by listing color, image, repeat, position,
+		and attachment in order. Any of these can be skipped but they must be in this
+		order.</p>
+
+		<p>The background-size rule is a bit newer and not part of the shorthand; it has to be added separately:</p>
+
+		<pre>
+		<code>
+header {
+	background: #637782 url('img/2000_1500.png') no-repeat center; 
+	background-size: cover;
+}
+		</code>
+		</pre>
+
+</main>
+
+
+
+</body>
+
+</html>
