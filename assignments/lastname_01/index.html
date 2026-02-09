@@ -11,19 +11,31 @@
 
 		<script>
     // Create a new link element
+	
     const linkElement = document.createElement('link');
     linkElement.rel = 'stylesheet';
     linkElement.type = 'text/css';
 		linkElement.href = (Math.random() > .5 ? 'css/good.css' : 'css/bad.css'); 
     document.head.appendChild(linkElement);
+	
 		</script>
+
 
 	</head>
 
 
 	<body>
 
-		<h1>WRA 410 Assignment 01</h1>
+		<nav>
+			<ul>
+				<li><a href="link1.html">link 1</a></li>
+				<li><a href="link2.html" class="current">link 2</a></li>
+				<li><a href="link3.html">link 3</a></li>
+				<li><a href="link3.html">link 3</a></li>
+			</ul>
+		</nav>
+
+
 
 	</body>
 
