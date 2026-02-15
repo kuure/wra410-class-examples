@@ -1,12 +1,10 @@
 /* google fonts need to be put here starting with '@import' */
-
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap');
 
 /*
 css reset - this sets ALL elements to have zero padding and margin, 
 and to display in the more logical border-box style
 */
-
 *,
 *::before,
 *::after {
@@ -15,28 +13,103 @@ and to display in the more logical border-box style
 	padding: 0;
 }
 
+/*
+start with the outermost container, the <nav>
+- make it a flex container
+- space all the children out to the ends
+- set bg color, font, padding
+*/
 nav {
-	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: lightblue;
+	font-family: "Inter", sans-serif;
+	padding: 1rem;
 }
 
+
+/*
+style the logo div
+- the background-radius set to 50% makes it into a circle
+- also a flex container, so we can position its content
+- give it a size so it always shows up
+*/
+.logo {
+	border-radius: 50%;
+	background-color: magenta;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 6rem;
+	height: 6rem;
+}
+
+/*
+the text in the logo
+*/
+.logo h1 {
+	color: white;
+	font-weight: bold;
+}
+
+/* 
+style only <ul> elements that are inside of the <nav> element
+- again, make it a flex container
+- space the items out horizontally
+- center them vertically
+- set this to be 50% of the width of the containing element
+- remove the list-style dots from any elements 
+*/
 nav ul {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
-}
-
-nav ul li {
+	justify-content: space-between;
+	align-items: center;
 	list-style: none;
 }
 
-nav ul li a {
-	background-color: orange;
 
+nav ul li {
+	flex: 0 0 1;
+}
+
+/*
+the actual links - these are the clickable elements
+- setting to 'inline-block' fixes things, just do it
+- color and style stuff
+- transition all elements to the ":hover" state 
+*/
+nav ul li a {
+	display: block;
+	color: white;
+	font-weight: bold;
 	text-decoration: none;
+	font-size: 1.5rem;
+	padding: 1rem;
+	background-color: hsl(300 100% 50%);
+	border-radius: .5rem;
+	transition: all 0.1s ease-in 0.2s;
+}
+
+/*
+the current and hover versions of the links 
+- change bg color value 
+- move them slighly
+*/
+
+nav ul li a.current,  
+nav ul li a:hover { 
+	background-color: hsl(300 100% 75%);
+}
+
+nav ul li a:hover { 
+	transform: translate(0.1rem,0.1rem);
 }
 
 @media screen and (min-width: 769px) {
-  nav ul  {
-	flex-direction: row;
-  }
+	nav, nav ul {
+		flex-direction: row;
+	}
 }
+

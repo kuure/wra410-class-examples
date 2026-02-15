@@ -2,42 +2,60 @@
 
 <html lang="en-US">
 
-	<head>
+<head>
 
-		<title>WRA 410 Assignment 01 - Good and Bad Navigation</title>
+	<title>WRA 410 Assignment 01 - Good and Bad Navigation</title>
 
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<script>
-    // Create a new link element
-	
-    const linkElement = document.createElement('link');
-    linkElement.rel = 'stylesheet';
-    linkElement.type = 'text/css';
-		linkElement.href = (Math.random() > .5 ? 'css/good.css' : 'css/bad.css'); 
-    document.head.appendChild(linkElement);
-	
-		</script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-	</head>
+	<script>
+
+		// coin toss to use the word 'bad' or 'good' for the file names...
+		//const fileName = (Math.random() > .5 ? 'good' : 'bad'); 
+
+		const fileName = 'good';
+
+		// create a link for the css 
+		const cssLink = document.createElement('link');
+		// rel, type and href properties
+		cssLink.rel = 'stylesheet';
+		cssLink.type = 'text/css';
+		// get either the good or bad .css file
+		cssLink.href = `css/${fileName}.css`;
+
+		// same as above but for the icon
+		const iconLink = document.createElement('link');
+		iconLink.rel = 'icon';
+		iconLink.type = 'image/png';
+		iconLink.href = `${fileName}.png`
+
+		// append each element to the <head> of the HTML document
+		document.head.appendChild(iconLink);
+		document.head.appendChild(cssLink);
+
+	</script>
 
 
-	<body>
-
-		<nav>
-			<ul>
-				<li><a href="link1.html">link 1</a></li>
-				<li><a href="link2.html" class="current">link 2</a></li>
-				<li><a href="link3.html">link 3</a></li>
-				<li><a href="link3.html">link 3</a></li>
-			</ul>
-		</nav>
+</head>
 
 
+<body>
 
-	</body>
+	<nav>
+		<div class="logo">
+			<h1>Logo</h1>
+		</div>
+		<ul>
+			<li><a href="link1.html">Home</a></li>
+			<li><a href="link2.html" class="current">About</a></li>
+			<li><a href="link3.html">Portfolio</a></li>
+			<li><a href="link3.html">Contact</a></li>
+		</ul>
+	</nav>
+
+</body>
 
 
 </html>
