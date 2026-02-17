@@ -67,13 +67,29 @@ elements have a border or background color of some sort.</p>
 const h1 = document.querySelector("h1");
 
 
+const green = document.querySelector(".green-text");
+
+	// any element with a class of 'cmyk'
+const cmyk = document.querySelector(".cmyk");
+
+	// any image inside of an element with a class of '.bats'
+const bats = document.querySelector(".bats img");
+
+
+// select the 2nd instance of an h2 element on the page
+const secondh2 = document.querySelector("h2:nth-of-type(2)");
+
+// select the text input box 
+const inputBox = document.querySelector("input");
+
+
 // once you've selected it, you can change its properties,
 // including the HTML inside the tag, or any css 'style' values...
-h1.innerHTML = "DOM Scavenger Hunt";
-h1.style.color = "hsl(323, 98%, 62%)";
 
 // all your javascript code goes below:
 
+// make this say 'DOM Scavenger Hunt'
+h1.innerHTML = "DOM Scavenger Hunt";
 
 
 
