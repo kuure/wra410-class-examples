@@ -1,0 +1,154 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+	<title>WRA410 DOM Scavenger Hunt</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+<!--
+
+Save this document to your computer and open it in Visual Studio Code
+
+Using JavaScript, select elements from the document as specified and style them accordingly
+
+-->
+
+<h1>Make this say "DOM Scavenger Hunt"</h1>
+
+
+<p class="green-text">Make this text green. Also, make ALL the paragraph
+elements have a border or background color of some sort.</p>
+
+
+<ul class="cmyk">
+	<li>give me a cyan background</li>
+	<li>give me a magenta background</li>
+	<li>give me a yellow background</li>
+	<li>give me a black background, but with white text</li>
+</ul>
+
+
+<h2>This Element Should Be Showing </h2>
+
+<h2>This Element Should Not</h2>
+
+
+<div class="bats">
+	<img src="bats.jpg" alt="Release The Bats!">
+	<p>Make us look like we're standing instead of hanging...</p>
+</div>
+
+
+<p>This is another paragraph that is here for formatting purposes.</p>
+
+<p>So is this.</p>
+
+
+<p>Put some text in this box:</p>
+<div>
+	<input type="text">
+</div>
+
+<script>
+
+// this script block can go anywhere, but it's best if it goes right at 
+// the end, before the close of the body tag
+
+
+// get started by using document.querySelector() to pick elements using
+// the same syntax used for css...
+const h1 = document.querySelector("h1");
+
+// any element with a class of 'green-text'
+const green = document.querySelector(".green-text");
+
+	// any element with a class of 'cmyk'
+const cmyk = document.querySelector(".cmyk");
+
+	// any image inside of an element with a class of '.bats'
+const batImage = document.querySelector(".bats img");
+
+// select the 2nd instance of an h2 element on the page
+const secondh2 = document.querySelector("h2:nth-of-type(2)");
+
+// select the text input box 
+const inputBox = document.querySelector("input");
+
+
+// once you've selected it, you can change its properties,
+// including the HTML inside the tag, or any css 'style' values...
+
+// all your javascript code goes below:
+
+// make this say 'DOM Scavenger Hunt'
+h1.innerHTML = "DOM Scavenger Hunt";
+
+
+
+//<p class="green-text">Make this text green. 
+green.style.color = "rgba(0,255,0,0.7);"
+
+//Also, make ALL the paragraph elements have a border or background color 
+const allPTags = document.querySelectorAll("p");
+allPTags.forEach(p => p.style.backgroundColor = "pink");
+
+
+// you can use querySelector on anything, not just the document
+
+//<ul class="cmyk">
+//	<li>give me a cyan background</li>
+//	<li>give me a magenta background</li>
+//	<li>give me a yellow background</li>
+//	<li>give me a black background, but with white text</li>
+//</ul>
+
+
+// default selector grabs the first element, but you can be explicit:
+const cyan = cmyk.querySelector("li:first-child");
+// the second and third ones
+const magenta = cmyk.querySelector("li:nth-child(2)");
+const yellow = cmyk.querySelector("li:nth-child(3)");
+// the last one
+const black = cmyk.querySelector("li:last-child");
+
+
+cyan.style.backgroundColor = "cyan";
+magenta.style.backgroundColor = "magenta";
+yellow.style.backgroundColor = "yellow";
+black.style.backgroundColor = "black";
+black.style.color = "white";
+
+
+
+
+//<h2>This Element Should Not</h2>
+
+// take out completely
+secondh2.style.display = "none";
+// hide, but still take up space
+//secondh2.style.visibility = "hidden";
+// hide by making fully transparent
+//secondh2.style.opacity = 0;
+
+//	<p>Make us look like we're standing instead of hanging...</p>
+batImage.style.transform = "rotate(180deg)";
+
+
+// <input type="text">
+
+inputBox.placeholder = "Placeholder Text";
+inputBox.value = "Text set as value property";
+
+</script>
+
+
+</body>
+
+</html>
