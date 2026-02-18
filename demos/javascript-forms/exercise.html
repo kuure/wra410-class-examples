@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html lang="en-US">
+
+<head>
+
+	<title>Event Exercise</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+
+<body>
+
+	<div>
+		<label for="inputText">Enter Text</label>
+		<input type="text" name="inputText" id="inputText">
+	</div>
+
+	<div id="outputText"></div>
+
+	<div>
+		<label for="fontWeight">Bold:</label>
+		<input type="checkbox" id="fontWeight" name="fontWeight" value="bold">
+	</div>
+
+	<script>
+
+		const input = document.querySelector("#inputText");
+		const output = document.querySelector("#outputText");
+		const box = document.querySelector("#fontWeight");
+
+
+		input.addEventListener('input',() => {
+			output.innerHTML = input.value;
+		})
+
+		box.addEventListener('change', (e) => {
+			if(e.target.checked) {
+				output.style.fontWeight = "bold";
+				console.log("bold is checked");
+			}
+			else {
+				output.style.fontWeight = "normal";
+				console.log("bold is NOT checked");
+			}
+		})
+
+
+	</script>
+
+</body>
+
+</html>
