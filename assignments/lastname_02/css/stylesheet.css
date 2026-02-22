@@ -1,0 +1,12 @@
+/*
+reset - this sets ALL elements to have zero padding and margin,
+and to display in the more logical border-box style
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
