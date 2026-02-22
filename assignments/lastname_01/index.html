@@ -12,10 +12,14 @@
 
 	<script>
 
-		// coin toss to use the word 'bad' or 'good' for the file names...
-		//const fileName = (Math.random() > .5 ? 'good' : 'bad'); 
 
-		const fileName = 'good';
+		// use random css and icon files each time...
+		const fileName = (Math.random() > .5 ? 'good' : 'bad'); 
+
+		// or for testing, you can use either value explicitly
+		// const fileName = 'good';
+		// const fileName = 'good';
+
 
 		// create a link for the css 
 		const cssLink = document.createElement('link');
@@ -56,6 +60,4 @@
 	</nav>
 
 </body>
-
-
 </html>
