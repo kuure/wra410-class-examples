@@ -1,0 +1,107 @@
+<!doctype html>
+
+<html lang="en">
+
+	<head>
+
+		<title>JavaScript Functions and Conditionals Demo</title>
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	</head>
+
+
+	<body>
+
+		<h1>JavaScript Functions and Conditionals Demo</h1>
+
+
+<script>
+
+// simple true or false
+const word = "hello";
+console.log(word === "hello"); // prints "true"
+console.log(word !== "hello"); // prints "false"
+
+
+
+
+// greater than or equal to
+const num = 5;
+if(num <= 5){
+  console.log("num is greater than or equal to 5");
+}
+
+
+// text matching with if / else
+const name = "jeff";
+if(name === "jeff") {
+  console.log("Name matches");
+}
+else {
+  console.log("Name does NOT match");
+}
+
+
+
+// text matching with if / else if / else
+const lastName = "kuure";
+if(lastName === "jones") {
+  console.log("Name is 'jones'");
+}
+else if(lastName === "kuure"){
+  console.log("Name is 'kuure'");
+}
+else {
+  console.log("Name is neither");
+}
+
+
+// and, or, and not
+const mouse = "itchy";
+const cat = "scratchy";
+
+// and
+if(mouse === "itchy" && cat === "scratchy") {
+  console.log("both are true");
+}
+// or
+if(mouse === "itchy" || cat === "tom") {
+ console.log("at least one is true");
+}
+// not
+if(mouse !== "jerry") {
+  console.log("mouse does NOT equal 'jerry'");
+}
+
+
+
+// simple function
+function sum(x,y) {
+  return(x + y);
+}
+
+sum(6,7);
+sum(6,"Seven");
+
+
+
+// more complex example, but acts the same
+function betterSum(x,y) {
+  if (typeof x !== 'number' || !Number.isFinite(x)) {
+    console.log("Error: first value must be a number");
+  } 
+  else if (typeof y !== 'number' || !Number.isFinite(y)) {
+    console.log("Error: second value must be a number");
+  }
+  else {
+    return(x + y);
+  }
+}
+
+</script>
+
+	</body>
+
+</html>
