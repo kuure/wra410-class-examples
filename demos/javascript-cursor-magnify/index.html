@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Image Magnification</title>
+
+	<style>
+
+		/* reset */
+		*,
+		*::before,
+		*::after {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		/* you can define variables here and use them elsewhere */
+		:root {
+			--circle-size: 400px;
+			--accent-color: rgb(250, 0, 250);
+			--bg-color: rgb(250, 220, 150);
+			--shadow-color: rgba(0, 0, 0,0.4);
+		}
+
+		body {
+			/* using the var --bg-color */
+			background-color: var(--bg-color);
+			height: 100vh;
+			width: 100%;
+			overflow: hidden;
+		}
+
+		/* this is a class with a number of useful positioning properties */
+		.center {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		/* the main visible photo element - it has a border to make it stand out */
+		.photoContainer {
+			border: 3px solid var(--accent-color);
+			width: calc(var(--circle-size) * 4);
+			height: fit-content;
+			position: relative;
+		}
+
+		.photoContainer img {
+			max-width: 100%;
+			display: block;
+		}
+
+		.photoBackground {
+			top: 0;
+			left: 0;
+			position: absolute;
+			width: var(--circle-size);
+			height: var(--circle-size);
+			border-radius: 50%;
+			border: 10px solid var(--accent-color);
+			box-shadow: 10px 10px 20px var(--shadow-color);
+			display: none;
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<header class="center">
+		<div class="photoContainer">
+			<img src="calumet.jpg" class="photoImage" alt="Calumet, Michigan" />
+			<div class="photoBackground" style="background: url(calumet.jpg) no-repeat"></div>
+		</div>
+	</header>
+
+
+	<script>
+
+		// first, what elements do we need to pay attention to?	
+
+
+		// the outer photo container div
+		const photoContainer = document.querySelector(".photoContainer");
+
+		// the div with the image as a background
+		const photoBackground = document.querySelector(".photoBackground");
+
+		// the image itself 
+		const photoImage = document.querySelector(".photoImage");
+
+
+		// make a new html <img> based on the original one
+		const originalImage = new Image();
+		originalImage.src = photoImage.src;
+
+
+
+
+		// second, what user interaction do we want to listen for?
+
+
+		// listen for the mouse to move over photoContainer
+		photoContainer.addEventListener("mousemove", (e) => {
+			// when that happens, pass the event to the function below
+			magnifyEffect(e);
+		});
+
+
+
+
+		// finally, what do we want to do when that interaction happens?
+
+		// the main function that does all the things
+		// it is passed the event information as an argument
+		function magnifyEffect(e) {
+
+			// 'getBoundingClientRect()' is a built in property that tells you 
+			// info about the rectangular container around an element
+			//console.log(magnify.getBoundingClientRect());
+
+			// you can narrow these down by asking for just one of them
+			//console.log(magnify.getBoundingClientRect().left);
+
+			// you can assign each one of these to a variable name for 
+			// easier reference 
+			//let left = magnify.getBoundingClientRect().left;
+			//let top = magnify.getBoundingClientRect().right;
+			//let width = magnify.getBoundingClientRect().width;
+			//let height = magnify.getBoundingClientRect().height;
+
+			
+			// TLDR this is a common shorthand for using existing property names
+			let {left, top, width, height} = photoContainer.getBoundingClientRect();
+
+
+
+			// here we figure out what's going on with the event that called us
+
+			let relativePositionX = e.clientX - left;
+			let relativePositionY = e.clientY - top;
+
+			// if the cursor is within the boundaries of the element, display
+			// as a block level element
+			if (relativePositionX > 0 &&
+				relativePositionY > 0 &&
+				relativePositionX < width &&
+				relativePositionY < height) {
+				photoBackground.style.display = "block";
+			}
+			// otherwise don't display it at all
+			else {
+				photoBackground.style.display = "none";
+			}
+
+			// if it's displayed...
+			if (photoBackground.style.display === "block") {
+				photoBackground.style.left = relativePositionX - photoBackground.clientWidth / 2 + "px";
+				photoBackground.style.top = relativePositionY - photoBackground.clientHeight / 2 + "px";
+
+				// find the background X position
+				let bgPositionX =
+					// round down the results
+					Math.round(
+						(relativePositionX / photoImage.clientWidth) 
+						* originalImage.width - photoBackground.clientWidth / 2 
+					) * -1;
+
+				// find the background Y position
+				let bgPositionY =
+					Math.round(
+						(relativePositionY / photoImage.clientHeight) 
+						* originalImage.height - photoBackground.clientHeight / 2
+					) * -1;
+
+				// position the background accordingly
+				photoBackground.style.backgroundPosition = `${bgPositionX}px ${bgPositionY}px`;
+			}
+		}
+
+	</script>
+</body>
+
+</html>
