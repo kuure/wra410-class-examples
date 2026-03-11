@@ -1,0 +1,38 @@
+/*
+
+needed in stylesheet:
+
+- background image for the div
+- font color, style, and shadow inside of div
+
+*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.imageContainer {
+    background-image: url('../img/spongebob.jpg');
+    min-width: 583px;
+	min-height: 411px;
+	max-width: 583px;
+	max-height: 411px;
+
+    font-family: "Impact", sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    color: rgb(255,255,255);
+    	text-shadow:
+		-3px -3px 0 #000,  
+		3px -3px 0 #000,
+		-3px 3px 0 #000,
+		3px 3px 0 #000;
+
+    padding: 1rem;
+
+}
+
