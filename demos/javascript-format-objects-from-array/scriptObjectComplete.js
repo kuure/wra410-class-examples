@@ -23,25 +23,25 @@ const data = [
   {
     "name":"Bulbasaur",
     "species":"Seed Pokémon",
-    "image":"https://kuurola.com/pokemon/images/bulbasaur.jpg",
+    "image":"https://baddayeveryday.com/images/pokemon/bulbasaur.jpg",
 		"type":[ 
 			"poison", "grass" 
 		]
   },
 
-  { "name":"Charmander", "species":"Lizard Pokémon", "image":"https://kuurola.com/pokemon/images/charmander.jpg", "type":[ "fire" ] },
-  { "name":"Sandshrew", "species":"Mouse Pokémon", "image":"https://kuurola.com/pokemon/images/sandshrew.jpg", "type":[ "ground" ] },
-  { "name":"Diglett", "species":"Mole Pokémon", "image":"https://kuurola.com/pokemon/images/diglett.jpg", "type":[ "ground" ] },
-  { "name":"Snorlax", "species":"Sleeping Pokémon", "image":"https://kuurola.com/pokemon/images/snorlax.jpg", "type":[ "normal" ] },
-  { "name":"Piloswine", "species":"Swine Pokémon", "image":"https://kuurola.com/pokemon/images/piloswine.jpg", "type":[ "ice", "ground" ] },
-  { "name":"Houndoom", "species":"Dark Pokémon", "image":"https://kuurola.com/pokemon/images/houndoom.jpg", "type":[ "dark", "fire" ] },
-  { "name":"Ludicolo", "species":"Carefree Pokémon", "image":"https://kuurola.com/pokemon/images/ludicolo.jpg", "type":[ "water", "grass" ] },
-  { "name":"Umbreon", "species":"Moonlight Pokémon", "image":"https://kuurola.com/pokemon/images/umbreon.jpg", "type":[ "dark" ] },
-  { "name":"Tentacruel", "species":"Jellyfish Pokémon", "image":"https://kuurola.com/pokemon/images/tentacruel.jpg", "type":[ "water", "poison" ] },
+  { "name":"Charmander", "species":"Lizard Pokémon", "image":"https://baddayeveryday.com/images/pokemon/charmander.jpg", "type":[ "fire" ] },
+  { "name":"Sandshrew", "species":"Mouse Pokémon", "image":"https://baddayeveryday.com/images/pokemon/sandshrew.jpg", "type":[ "ground" ] },
+  { "name":"Diglett", "species":"Mole Pokémon", "image":"https://baddayeveryday.com/images/pokemon/diglett.jpg", "type":[ "ground" ] },
+  { "name":"Snorlax", "species":"Sleeping Pokémon", "image":"https://baddayeveryday.com/images/pokemon/snorlax.jpg", "type":[ "normal" ] },
+  { "name":"Piloswine", "species":"Swine Pokémon", "image":"https://baddayeveryday.com/images/pokemon/piloswine.jpg", "type":[ "ice", "ground" ] },
+  { "name":"Houndoom", "species":"Dark Pokémon", "image":"https://baddayeveryday.com/images/pokemon/houndoom.jpg", "type":[ "dark", "fire" ] },
+  { "name":"Ludicolo", "species":"Carefree Pokémon", "image":"https://baddayeveryday.com/images/pokemon/ludicolo.jpg", "type":[ "water", "grass" ] },
+  { "name":"Umbreon", "species":"Moonlight Pokémon", "image":"https://baddayeveryday.com/images/pokemon/umbreon.jpg", "type":[ "dark" ] },
+  { "name":"Tentacruel", "species":"Jellyfish Pokémon", "image":"https://baddayeveryday.com/images/pokemon/tentacruel.jpg", "type":[ "water", "poison" ] },
+
+
 ]
 
-
-const container = document.querySelector("#container")
 
 // call the funtion to generate the HTML
 document.querySelector("#container").innerHTML = buildPage(data);
@@ -66,6 +66,5 @@ function buildPage(dataArray) {
 	`)}).join("");
 
 	return(dataHTML);
-
 }
 
