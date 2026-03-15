@@ -6,7 +6,7 @@ const nav = document.querySelector("nav")
 // each object has "url" and "text" properties to store the 
 // things that you want to format into your links
 const navLinks = [
-	{"url" : "about", "text" : "About Us"},
+	{"url" : "about", "text" : "About Me, Dammit"},
 	{"url" : "contact", "text" : "Contact"},
 	{"url" : "home", "text" : "Home"},
 	{"url" : "portfolio", "text" : "Portfolio"},

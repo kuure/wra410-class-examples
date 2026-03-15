@@ -42,4 +42,32 @@ const data = [
 // how do you get this all formatted and inserted into the DOM?
 
 
+// call the funtion to generate the HTML
+document.querySelector("#container").innerHTML = buildPage(data);
 
+function buildPage(dataArray) {
+
+	const dataHTML = dataArray
+	
+	.filter(blah => !blah.name.toLowerCase().startsWith("s"))
+	
+	.map(dataItem => {
+
+	return(`
+	<div class="item">
+		<div class="text">
+			<h1>${dataItem.name}</h1>
+			<h2>${dataItem.species}</h2>
+			<p>Type: ${dataItem.type.join(", ")}</p>
+		</div>
+
+		<figure>
+			<img src="${dataItem.image}" alt="${dataItem.name}"/>
+		</figure>
+
+	</div>
+	`)}).join("");
+
+	return(dataHTML);
+
+}
