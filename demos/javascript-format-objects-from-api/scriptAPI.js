@@ -1,5 +1,5 @@
 // the url for any API that returns JSON data
-const url = 'https://jsonplaceholder.typicode.com/users'; 
+const url = "https://kuurola.com/api/json/pokedemo/";
 
 // the html container
 const container = document.querySelector(".container");
@@ -7,12 +7,19 @@ const container = document.querySelector(".container");
 
 
 // immediately call the function that runs all the other functions
-doTheWholeThing();
+doTheWholeThing()
 
+
+
+
+// this is a special type of function that runs 
+// aynsyncronously, allowing you to get stuff over
+// a network while allowing for latencies
 async function doTheWholeThing() {
 
 	// first, get the remote data
 	const data = await getData();
+	
 	// when we have it, print to the console
 	console.log(data);
 
@@ -24,6 +31,34 @@ async function doTheWholeThing() {
 	console.log(result);
 	container.innerHTML = result;
 }
+
+
+
+
+// the function that processes the data into HTML
+function processData(dataArray) {
+
+	// use the .map() tool to chop up and format parts
+	// of the data 
+	const formattedData = dataArray.map( dataItem => {
+		return(`
+		<div class="item">
+			<div class="text">
+				<h1>${dataItem.name}</h1>
+				<h2>${dataItem.species}</h2>
+				<p>Type: ${dataItem.type.join(", ")}</p>
+			</div>
+
+			<figure>
+				<img src="${dataItem.image}" alt="${dataItem.name}"/>
+			</figure>
+
+		</div>
+		`)}).join("");
+		return(formattedData);
+}
+
+
 
 
 // the function that fetches the remote data
@@ -38,17 +73,4 @@ async function getData() {
 }
 
 
-// the function that processes the data into HTML
-function processData(dataArray) {
 
-	// use the .map() tool to chop up and format parts
-	// of the data 
-	const formattedData = dataArray.map( dataItem => {
-		return(`
-		<div class="item">
-		<h1>${dataItem.name}</h1>
-		<h2>${dataItem.username}</h2>
-		</div>
-	`)}).join("");
-	return(formattedData);
-}

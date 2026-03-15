@@ -39,35 +39,35 @@ const data = [
 ];
 
 
-// how do you get this all formatted and inserted into the DOM?
 
 
-// call the funtion to generate the HTML
+// right when the page loads, find the container and set its
+// innerHTML value to the results of calling the buildPage() function
+// with the 'data' above as an argument
 document.querySelector("#container").innerHTML = buildPage(data);
 
-function buildPage(dataArray) {
 
-	const dataHTML = dataArray
-	
-	.filter(blah => !blah.name.toLowerCase().startsWith("s"))
-	
-	.map(dataItem => {
 
-	return(`
-	<div class="item">
-		<div class="text">
-			<h1>${dataItem.name}</h1>
-			<h2>${dataItem.species}</h2>
-			<p>Type: ${dataItem.type.join(", ")}</p>
+// the function that processes the data into HTML
+function processData(dataArray) {
+
+	// use the .map() tool to chop up and format parts
+	// of the data 
+	const formattedData = dataArray.map( dataItem => {
+		return(`
+		<div class="item">
+			<div class="text">
+				<h1>${dataItem.name}</h1>
+				<h2>${dataItem.species}</h2>
+				<p>Type: ${dataItem.type.join(", ")}</p>
+			</div>
+
+			<figure>
+				<img src="${dataItem.image}" alt="${dataItem.name}"/>
+			</figure>
+
 		</div>
-
-		<figure>
-			<img src="${dataItem.image}" alt="${dataItem.name}"/>
-		</figure>
-
-	</div>
-	`)}).join("");
-
-	return(dataHTML);
-
+		`)}).join("");
+		return(formattedData);
 }
+
