@@ -1,5 +1,5 @@
-# format-objects-from-array
+# format-objects-from-api
 
-This example includes an array of objects; the goal is to loop through
-the array and format each object with HTML.
+An example of using async / await to retrieve remote API data and format
+it. 
 
