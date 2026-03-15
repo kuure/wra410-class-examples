@@ -2,7 +2,7 @@
 const url = "https://kuurola.com/api/json/pokedemo/";
 
 // the html container
-const container = document.querySelector(".container");
+const container = document.querySelector("#container");
 
 
 
