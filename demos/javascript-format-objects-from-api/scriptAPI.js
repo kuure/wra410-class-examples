@@ -6,7 +6,7 @@ const container = document.querySelector("#container");
 
 
 
-// immediately call the function that runs all the other functions
+// immediately call this, the main function that controls all the other functions
 doTheWholeThing()
 
 
