@@ -2,12 +2,11 @@
 const url = "https://api.weather.gov/gridpoints/GRR/82,39/forecast/hourly";
 
 // the html container
-const container = document.querySelector(".container");
+const container = document.querySelector(".weather");
 
 
 // immediately call the function that runs all the other functions
 weatherApp();
-
 
 
 

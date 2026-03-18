@@ -17,27 +17,9 @@ body {
 
 /* the main weather container */
 .weather {
-	border: 3px solid black;
-	font-size: 8rem;
+	border: 2px solid #000000;
+	font-size: 4rem;
 	font-weight: bold;
 	font-family: sans-serif;
 	padding: 2rem;
 }
-
-/* the four styles based on temperature */
-.hot {
-	background-color: red;
-}
-
-.warm {
-	background-color: pink;
-}
-
-.chilly {
-	background: lightblue;
-}
-
-.cold {
-	background-color: blue;
-}
-
