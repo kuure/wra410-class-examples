@@ -23,3 +23,16 @@ body {
 	font-family: sans-serif;
 	padding: 2rem;
 }
+
+.cold {
+	color: lightblue;
+}
+
+
+.warm {
+	color: pink;
+}
+
+.hot {
+	color: red;
+}
