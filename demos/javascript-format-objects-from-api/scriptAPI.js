@@ -1,5 +1,6 @@
 // the url for any API that returns JSON data
 const url = "https://kuurola.com/api/json/pokedemo/";
+const apiKey = 'THIS IS MY API KEY'; 
 
 // the html container
 const container = document.querySelector("#container");
@@ -18,7 +19,7 @@ doTheWholeThing()
 async function doTheWholeThing() {
 
 	// first, get the remote data
-	const data = await getData();
+	const data = await getData(url,apiKey);
 	
 	// when we have it, print to the console
 	console.log(data);
@@ -62,8 +63,16 @@ function processData(dataArray) {
 
 
 // the function that fetches the remote data
-async function getData() {
-	const response = await fetch(url);
+async function getData(url,key) {
+
+	//const response = await fetch(url);
+	const response = await fetch(url, {
+		method: 'GET',
+		headers: {
+			'X-API-Key': key,
+			'Accept': 'application/json'
+		}
+	});
 	// check for any errors
 	if (!response.ok) {
 		throw new Error(`An error has occured: ${response.status}`)
