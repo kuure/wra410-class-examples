@@ -15,12 +15,13 @@ section {
 	h1 {
 		color: red;
 	}
+
 }
 
 
 /* :has() applies to elements that "have" another as a child */
 section:has(ul) {
-	border: 4px solid rgb(232, 3, 3);
+	border: 4px solid rgb(37, 68, 241);
 }
 
 
@@ -34,6 +35,6 @@ section:has(ul) {
 /* if the container named "demobox" is greater than 700px wide... */
 @container demobox (width > 700px) {
   p {
-    font-size: 2em;
+    font-size: 2rem;
   }
 }
