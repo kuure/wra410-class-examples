@@ -65,14 +65,20 @@ function processData(dataArray) {
 // the function that fetches the remote data
 async function getData(url,key) {
 
-	//const response = await fetch(url);
+	// no API key needed
+	const response = await fetch(url);
+	
+	/* IF YOU NEED AN API KEY:
 	const response = await fetch(url, {
 		method: 'GET',
 		headers: {
-			'X-API-Key': key,
+			'X-API-Key': 'PUT YOUR KEY HERE',
 			'Accept': 'application/json'
 		}
 	});
+	*/
+
+
 	// check for any errors
 	if (!response.ok) {
 		throw new Error(`An error has occured: ${response.status}`)
