@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+
+section {
+	background-color: hsl(180, 100%, 50%);
+	border: 2px solid rgb(252, 3, 232);
+	padding: 1rem;
+	margin: 1rem;
+
+	/* nesting  - h1 elements but ONLY if inside a section*/
+	h1 {
+		color: red;
+	}
+}
+
+
+/* :has() applies to elements that "have" another as a child */
+section:has(ul) {
+	border: 4px solid rgb(232, 3, 3);
+}
+
+
+/* container queries - lke media queries, but can be based on size or style */
+.container {
+	/* define our contexts */
+  container-type: inline-size;
+  container-name: demobox;
+}
+
+/* if the container named "demobox" is greater than 700px wide... */
+@container demobox (width > 700px) {
+  p {
+    font-size: 2em;
+  }
+}
