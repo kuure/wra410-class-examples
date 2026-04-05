@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: pink;
+	display: flex;
+}
+
+main {
+	background-color: white;
+	font-size: 1.25rem;
+	border: 1px solid black;
+	padding: 1rem;
+	width: 80%;
+	margin: 2rem auto;
+}
+
+main p {
+	margin: 1rem;
+}
+
+
+/* Style the modal content */
+dialog {
+	background-color: lightblue;
+	padding: 3rem;
+	border-radius: 0.5rem;
+	border: none;
+	align-self: center;
+	justify-self: center;
+}
+
+/* Style the background overlay */
+dialog::backdrop {
+	background-color: rgba(0, 0, 0, 0.7);
+}
