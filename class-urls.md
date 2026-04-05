@@ -1,7 +1,7 @@
-# Spring 2026 Class URLs
 
 
 Account: <https://github.com/mtarnopol>
+
 Site: <https://mtarnopol.github.io>
 
 
