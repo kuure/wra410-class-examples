@@ -1,6 +1,11 @@
+// Load variables from .env
+require('dotenv').config(); 
+const apiKey = process.env.MY_API_KEY;
+	//
 // Example usage
 const url = 'https://kuurola.com/api/json/pokedemo/';
-const apiKey = 'THIS IS MY API KEY'; 
+
+// get the data
 const data = fetchDataWithApiKey(url, apiKey);
 
 console.log(data)
