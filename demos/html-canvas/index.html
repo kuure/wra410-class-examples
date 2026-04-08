@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<title>HTML Canvas JavaScript Objects</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="css/stylesheet.css">
+
+	<style>
+	canvas {
+		border: 1px solid black;
+		background-color: white;
+		width: 100%;
+	}
+	</style>
+	
+</head>
+
+<body>
+
+<h1>HTML Canvas</h1>
+
+
+<canvas width="800" height="400"></canvas>
+
+
+<script>
+
+// set up a 2d HTML canvas
+const canvas = document.querySelector('canvas');
+
+// create a drawing object (the "context")
+const ctx = canvas.getContext("2d");
+
+ctx.fillStyle = "#00ffff";
+ctx.fillRect(20, 20, 150, 100);
+
+
+ctx.font = "40px Arial";
+ctx.fillStyle = "#ff00ff";
+ctx.textAlign = "center";
+ctx.fillText("Hello Canvas", 300, 100);
+
+
+
+</script>
+
+</body>
+</html>
