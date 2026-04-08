@@ -8,6 +8,7 @@
 
 		<style>
 			p {
+				/* animation settings */
 				animation-duration: 3s;
 				animation-name: slide-in;
 				animation-iteration-count: 3;
@@ -15,12 +16,15 @@
 			}
 
 			p span {
-				display: inline-block;
+				/* animation settings */
 				animation-duration: 3s;
 				animation-name: grow-shrink;
 				animation-iteration-count: infinite;
+				/* default is inline */
+				display: inline-block;
 			}
 
+			/* 'slide-in' defintion */
 			@keyframes slide-in {
 				from {
 					translate: 150vw 0;
@@ -33,6 +37,7 @@
 				}
 			}
 
+			/* 'grow-shrink' defintion */
 			@keyframes grow-shrink {
 				25%,
 				75% {
@@ -62,16 +67,21 @@
 
 			let count = 0;
 
+			// event listeners
+
+			// animation starts
 			element.addEventListener('animationstart', () => {
 				console.log('animation started');
 			});
 
+			// animation stops
 			element.addEventListener('animationend', () => {
 				console.log('animation stopped');
 			});
 
+			// on every loop...
 			element.addEventListener('animationiteration', () => {
-				console.log('animation count:', count++);
+				console.log(`animation count: ${count++}`);
 			});
 
 		</script>
