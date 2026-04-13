@@ -1,0 +1,98 @@
+<html lang="en">
+
+<head>
+
+	<title>CSS Grid Demo 1</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style>
+		*,
+		*::before,
+		*::after {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			font-family: sans-serif;
+		}
+
+		.container {
+
+			/* tell this box to behave as a grid container */
+			display: grid;
+
+			/* draw 3 columns in fr units - all equal width */
+			grid-template-columns: 1fr 1fr 1fr;
+
+			/* make rows at least 100px tall, auto stretch to fit content */
+			grid-auto-rows: minmax(40px, auto);
+
+			/* gap between grid items */
+			grid-gap: 0;
+		}
+
+		.box {
+			padding: 2rem;
+		}
+
+		.box1 {
+			background-color: silver;
+			/*
+		grid-column: 1/4;
+		grid-row: 1/4;
+				*/
+		}
+
+		.box2 {
+			background-color: lightblue;
+			/*
+		grid-row: 1/2;
+		grid-column: 1/2;
+				*/
+		}
+
+		.box3 {
+			background-color: lightgreen;
+		}
+
+		.box4 {
+			background-color: yellow;
+		}
+
+		.box5 {
+			background-color: orange;
+		}
+
+		.box6 {
+			background-color: pink;
+			/*
+		grid-column: 1/4;
+				*/
+		}
+
+	</style>
+
+
+
+</head>
+
+<body>
+
+	<h1>CSS Grid Demo 02</h1>
+
+	<div class="container">
+		<div class="box box1">Box 1</div>
+		<div class="box box2">Box 2</div>
+		<div class="box box3">Box 3</div>
+		<div class="box box4">Box 4</div>
+		<div class="box box5">Box 5</div>
+		<div class="box box6">Box 6</div>
+	</div>
+
+</body>
+
+</html>

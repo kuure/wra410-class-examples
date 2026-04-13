@@ -1,0 +1,144 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>CSS Grid Layout</title>
+
+	<style>
+		*,
+		*::before,
+		*::after {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			font-family: sans-serif;
+		}
+
+		.outerwrapper {
+			display: grid;
+			height: 100vh;
+			grid-template-areas:
+				"headergrid"
+				"navgrid"
+				"maingrid"
+				"footergrid";
+			grid-template-rows: 10rem auto;
+		}
+
+		header {
+			background-color: lightblue;
+			padding: 2rem;
+			grid-area: headergrid;
+		}
+
+		nav {
+			grid-area: navgrid;
+			background-color: yellow;
+		}
+
+		nav ul {
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			list-style: none;
+		}
+
+
+		nav a {
+			display: block;
+			text-decoration: none;
+			background-color: lightgrey;
+			text-align: center;
+			margin-bottom: 1rem;
+			padding: 0.5rem;
+		}
+
+
+		main {
+			grid-area: maingrid;
+			background-color: lightpink;
+			padding: 3rem;
+		}
+
+		footer {
+			grid-area: footergrid;
+			background-color: orange;
+			padding: 3rem;
+		}
+
+		@media screen and (min-width: 767px) {
+
+			.outerwrapper {
+				grid-template-areas:
+					"headergrid headergrid"
+					"navgrid maingrid"
+					"footergrid footergrid";
+				grid-template-columns: 1fr 4fr;
+				grid-template-rows: 1fr 10fr 1fr;
+			}
+		}
+
+	</style>
+
+
+</head>
+
+
+<div class="outerwrapper">
+
+	<header>
+		<h1>CSS Grid Layout / Nav Demo</h1>
+	</header>
+
+	<nav>
+		<ul>
+			<li><a href="">item one</a></li>
+			<li><a href="">item two</a></li>
+			<li><a href="">item three</a></li>
+			<li><a href="">item four</a></li>
+		</ul>
+	</nav>
+
+
+	<main>
+
+		<h2>Main Column</h2>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ipsam
+			voluptatibus soluta, consequuntur, reiciendis debitis omnis fugiat
+			libero pariatur amet laudantium minima consectetur tenetur.
+			Repudiandae, autem, voluptate modi deleniti sequi voluptatum!</p>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi earum
+			fugit veniam amet quae sint vitae numquam dolore sunt quod a odio
+			officia voluptate doloribus, at. Cum quasi mollitia eaque. Voluptatibus
+			soluta, consequuntur, reiciendis debitis omnis fugiat libero pariatur
+			amet laudantium.</p>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam
+			voluptatibus soluta, consequuntur, reiciendis debitis omnis fugiat
+			libero pariatur amet laudantium minima consectetur tenetur.
+			Repudiandae, autem, voluptate modi deleniti sequi voluptatum!</p>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi earum
+			fugit veniam amet quae sint vitae numquam dolore sunt quod a odio
+			officia voluptate doloribus, at. Cum quasi mollitia eaque.</p>
+
+	</main>
+
+	<footer>
+		I am a footer
+	</footer>
+
+</div>
+
+</body>
+
+</html>
