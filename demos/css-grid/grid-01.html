@@ -26,13 +26,15 @@
 			display: grid;
 
 			/* draw 3 columns in fr units - all equal width */
-			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-columns: repeat(3, 1fr);
 
 			/* make rows at least 100px tall, auto stretch to fit content */
-			grid-auto-rows: minmax(40px, auto);
+			grid-auto-rows: minmax(10rem, auto);
 
 			/* gap between grid items */
 			grid-gap: 0;
+
+			height: 100vh;
 		}
 
 		.box {
@@ -41,18 +43,16 @@
 
 		.box1 {
 			background-color: silver;
-			/*
-		grid-column: 1/4;
-		grid-row: 1/4;
-				*/
+	
+
 		}
 
 		.box2 {
 			background-color: lightblue;
-			/*
+	
 		grid-row: 1/2;
 		grid-column: 1/2;
-				*/
+
 		}
 
 		.box3 {
