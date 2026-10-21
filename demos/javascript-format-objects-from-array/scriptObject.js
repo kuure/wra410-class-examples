@@ -1,3 +1,7 @@
+// where we want to put our formatted output
+const outputContainer = document.querySelector(".container");
+
+
 /*
 	 This is the data that we want to format into HTML to display on a page
 
@@ -10,12 +14,11 @@
 	like a variable name; the _value_ associated with each _key_ can be any
 	of the same things that can be in arrays
 
-	In web development, it is very common data formatted as an _array_ that
+	In web development, it is very common for data formatted as an _array_ that
 	contains any number of _objects_. Arrays are easy to loop through in order to
 	do some sort of action to each item encountered, while objects
 	are great for defining the kinds of things you might want to display on a web
 	page - search results, photos with captions with links, comments, etc.
-
  
 */
 const data = [
@@ -40,35 +43,15 @@ const data = [
 
 
 
-
-// right when the page loads, find the container and set its
-// innerHTML value to the results of calling the buildPage() function
-// with the 'data' above as an argument
-document.querySelector("#container").innerHTML = processData(data);
-
+// when the page loads, take the data from above, pass it to the
+// 'processData()' function, then set the contents of the container
+// div to be the value returned by the function
+outputContainer.innerHTML = processData(data);
 
 
-// the function that processes the data into HTML
+
+// this function takes the array and formats it
 function processData(dataArray) {
-
-	// use the .map() tool to chop up and format parts
-	// of the data 
-	const formattedData = dataArray.map(dataItem => {
-		return (`
-		<div class="item">
-			<div class="text">
-				<h1>${dataItem.name}</h1>
-				<h2>${dataItem.species}</h2>
-				<p>Type: ${dataItem.type.join(", ")}</p>
-			</div>
-
-			<figure>
-				<img src="${dataItem.image}" alt="${dataItem.name}"/>
-			</figure>
-
-		</div>
-		`)
-	}).join("");
-	return (formattedData);
+	console.log(dataArray);
 }
 
